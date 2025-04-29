@@ -117,7 +117,7 @@ table td, table th {
 
 /* 전체 기록 표 스타일 */
 #record {
-    width: 70%;
+    width: 90%;
     margin: 20px auto;
     border-collapse: collapse;
 }
@@ -755,7 +755,7 @@ table td, table th {
 
     <div class="tab-content" id="other-info">
         <h2>기타 안내사항</h2>
-        <h1>2025 N2 엔트리 리스트</h1>
+        <h1>2025 N2 엔트리 리스트(59명)</h1>
 
     <table id="entry-list">
         <thead>
@@ -1180,28 +1180,38 @@ table td, table th {
 
 
         function updateTimer() {
-            const currentTime = new Date();
-            const nextEventRow = [...document.querySelectorAll('#time-table-body tr')].find(row => {
-                const timeCell = row.cells[0].textContent.split(' ')[0];
-                const [hour, minute] = timeCell.split(':').map(Number);
-                const eventDate = new Date();
-                eventDate.setHours(hour, minute, 0, 0);
-                return currentTime < eventDate;
-            });
+    const currentTime = new Date();
+    const nextEventRow = [...document.querySelectorAll('#time-table-body tr')].find(row => {
+        const timeCell = row.cells[0].textContent.split(' ')[0];
+        const [hour, minute] = timeCell.split(':').map(Number);
+        const eventDate = new Date();
+        eventDate.setHours(hour, minute, 0, 0);
 
-            if (nextEventRow) {
-                const timeCell = nextEventRow.cells[0].textContent.split(' ')[0];
-                const [hour, minute] = timeCell.split(':').map(Number);
-                const nextEventTimeDate = new Date();
-                nextEventTimeDate.setHours(hour, minute, 0, 0);
-                const diff = nextEventTimeDate - currentTime;
+        const description = row.cells[1].textContent;
 
-                const hours = Math.floor(diff / 1000 / 60 / 60);
-                const minutes = Math.floor((diff / 1000 / 60) % 60);
-                const seconds = Math.floor((diff / 1000) % 60);
-                document.getElementById('timer').textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-            }
+        // 제외할 클래스 이름이 포함된 경우 건너뛴다
+        if (description.includes('eN1 클래스') || description.includes('금호 N1 클래스') || description.includes('넥센 N2 클래스 A조')) {
+            return false;
         }
+
+        // 현재 시간보다 미래면 후보
+        return currentTime < eventDate;
+    });
+
+    if (nextEventRow) {
+        const timeCell = nextEventRow.cells[0].textContent.split(' ')[0];
+        const [hour, minute] = timeCell.split(':').map(Number);
+        const nextEventTimeDate = new Date();
+        nextEventTimeDate.setHours(hour, minute, 0, 0);
+        const diff = nextEventTimeDate - currentTime;
+
+        const hours = Math.floor(diff / 1000 / 60 / 60);
+        const minutes = Math.floor((diff / 1000 / 60) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        document.getElementById('timer').textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+}
+
 
         setInterval(() => {
             highlightCurrentEvent();
