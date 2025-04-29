@@ -1148,21 +1148,36 @@ table td, table th {
         }
 
         function highlightCurrentEvent() {
-            const currentTime = new Date();
-            const timeRows = document.querySelectorAll('#time-table-body tr');
-            timeRows.forEach(row => {
-                const timeCell = row.cells[0].textContent.split(' ')[0];
-                const [hour, minute] = timeCell.split(':').map(Number);
-                const eventDate = new Date();
-                eventDate.setHours(hour, minute, 0, 0);
+    const currentTime = new Date();
+    const timeRows = document.querySelectorAll('#time-table-body tr');
 
-                if (currentTime >= eventDate && currentTime < new Date(eventDate.getTime() + 25 * 60 * 1000)) {
-                    row.classList.add('highlight');
-                } else {
-                    row.classList.remove('highlight');
-                }
-            });
+    timeRows.forEach(row => {
+        const timeText = row.cells[0].textContent.trim();
+        const match = timeText.match(/(\d{1,2}:\d{2})\s*~\s*(\d{1,2}:\d{2})/);
+
+        if (match) {
+            const [_, startTime, endTime] = match;
+            const [startHour, startMinute] = startTime.split(':').map(Number);
+            const [endHour, endMinute] = endTime.split(':').map(Number);
+
+            const startDate = new Date();
+            startDate.setHours(startHour, startMinute, 0, 0);
+
+            const endDate = new Date();
+            endDate.setHours(endHour, endMinute, 0, 0);
+
+            if (currentTime >= startDate && currentTime <= endDate) {
+                row.classList.add('highlight');
+            } else {
+                row.classList.remove('highlight');
+            }
+        } else {
+            // 만약 시간 형식이 이상하면 하이라이트 빼기
+            row.classList.remove('highlight');
         }
+    });
+}
+
 
         function updateTimer() {
             const currentTime = new Date();
