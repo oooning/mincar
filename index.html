@@ -1,180 +1,249 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2025 HNF (Round1_사전주행)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
     <style>
         /* 기본 스타일 */
-body {
-    font-family: 'Noto Sans', sans-serif;
-    text-align: center;
-}
+        body {
+            font-family: 'Gowun+Dodum', sans-serif;
+            text-align: center;
+        }
 
-h1 {
-    text-align: center;
-}
+        h1 {
+            text-align: center;
+        }
 
-h2 {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
 
-h4 {
-    text-align: center;
-    font-size: 15px;
-    color: #e95724;
-    margin-bottom: 5px;
-}
+        h4 {
+            text-align: center;
+            font-size: 15px;
+            color: #e95724;
+            margin-bottom: 5px;
+        }
 
-table {
-    width: 90%;
-    margin: 20px auto;
-    border-collapse: collapse;
-}
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
 
-.table-container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  overflow-x: auto;
-}
+        .table-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-}
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
 
-th {
-    background-color: #f2f2f2;
-}
+        th {
+            background-color: #f2f2f2;
+        }
 
-@keyframes blink-slow {
-  0%   { background-color: #abcae6; }
-  50%  { background-color: #d5e4f2; }
-  100% { background-color: #abcae6; }
-}
+        .small-info {
+            font-size: 0.80em;
+        }
 
-.highlight {
-  animation: blink-slow 1s infinite;
+        @keyframes blink-slow {
+            0% {
+                background-color: #abcae6;
+            }
 
-}
+            50% {
+                background-color: #dbefff;
+            }
 
-.tab-content {
-    display: none;
-}
+            100% {
+                background-color: #abcae6;
+            }
+        }
 
-.tab-links {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
+        .highlight {
+            animation: blink-slow 1s infinite;
 
-.tab-links div {
-    padding: 10px;
-    background-color: #f2f2f2;
-    margin-right: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
+        }
 
-.tab-links .active {
-    background-color: #efaa45;
-}
+        .tab-content {
+            display: none;
+        }
 
-/* 고딕 폰트 설정 */
-table td, table th {
-    font-family: 'Noto Sans', sans-serif;
-}
+        .tab-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
 
-/* 'en1', 'n1'을 제외한 일정에 대한 진하게 처리 */
-.bold-row {
-    font-weight: bold;
-}
+        .tab-links div {
+            padding: 10px;
+            background-color: #f2f2f2;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
 
-/* 타임테이블 열 너비 */
-#timetable th:nth-child(1), #timetable td:nth-child(1) {
-    width: 22.5%; /* 시간 열 너비 */
-}
+        .tab-links .active {
+            background-color: #efaa45;
+        }
 
-#timetable th:nth-child(2), #timetable td:nth-child(2) {
-    width: 35%; /* 내용 열 너비 */
-}
+        /* 고딕 폰트 설정 */
+        table td,
+        table th {
+            font-family: 'Noto Sans', sans-serif;
+        }
 
-#timetable th:nth-child(3), #timetable td:nth-child(3) {
-    width: 10.5%; /* 비고 열 너비 */
-}
+        /* 'en1', 'n1'을 제외한 일정에 대한 진하게 처리 */
+        .bold-row {
+            font-weight: bold;
+        }
 
-/* 타이머 스타일 */
-.timer {
-    font-size: 25px;
-    color: #e95724;
-    font-weight: bold;
-}
+        /* 타임테이블 열 너비 */
 
-/* 기록 비교 하위 탭 */
-.sub-tab-links {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
-}
+        #friday-time-table-body th:nth-child(1),
+        #friday-time-table-body td:nth-child(1) {
+            width: 30%;
+            /* 첫 번째 열(시간 열) 너비 */
+        }
 
-.sub-tab-link {
-    padding: 8px 16px;
-    background-color: #eee;
-    margin-right: 8px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 14px;
-}
+        #friday-time-table-body th:nth-child(2),
+        #friday-time-table-body td:nth-child(2) {
+            width: 45%;
+            /* 두 번째 열(내용 열) 너비 */
+        }
 
-.sub-tab-link.active {
-    background-color: #ccc;
-}
+        #friday-time-table-body th:nth-child(3),
+        #friday-time-table-body td:nth-child(3) {
+            width: 25%;
+            /* 세 번째 열(비고 열) 너비 */
+        }
 
-.sub-tab-content {
-    display: none;
-}
+        #saturday-time-table-body th:nth-child(1),
+        #saturday-time-table-body td:nth-child(1) {
+            width: 30%;
+            /* 첫 번째 열(시간 열) 너비 */
+        }
 
-.sub-tab-content.active {
-    display: block;
-}
+        #saturday-time-table-body th:nth-child(2),
+        #saturday-time-table-body td:nth-child(2) {
+            width: 45%;
+            /* 두 번째 열(내용 열) 너비 */
+        }
 
-/* 전체 기록 표 스타일 */
-#record {
-    width: 90%;
-    margin: 20px auto;
-    border-collapse: collapse;
-}
+        #saturday-time-table-body th:nth-child(3),
+        #saturday-time-table-body td:nth-child(3) {
+            width: 25%;
+            /* 세 번째 열(비고 열) 너비 */
+        }
 
-#record th, #record td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-}
+        #sunday-time-table-body th:nth-child(1),
+        #sunday-time-table-body td:nth-child(1) {
+            width: 30%;
+            /* 첫 번째 열(시간 열) 너비 */
+        }
 
-#record th {
-    background-color: #f2f2f2;
-}
+        #sunday-time-table-body th:nth-child(2),
+        #sunday-time-table-body td:nth-child(2) {
+            width: 45%;
+            /* 두 번째 열(내용 열) 너비 */
+        }
 
-/* 전체 기록 표 열 너비 */
-#record th:nth-child(1), #record td:nth-child(1) {
-    width: 15%; /* 엔트리 열 너비 */
-}
+        #sunday-time-table-body th:nth-child(3),
+        #sunday-time-table-body td:nth-child(3) {
+            width: 25%;
+            /* 세 번째 열(비고 열) 너비 */
+        }
 
-#record th:nth-child(2), #record td:nth-child(2) {
-    width: 35%; /* 이름 열 너비 */
-}
 
-#record th:nth-child(3), #record td:nth-child(3) {
-    width: 15%; /* BL 열 너비 */
-}
+        /* 타이머 스타일 */
+        .timer {
+            font-size: 25px;
+            color: #e95724;
+            font-weight: bold;
+        }
 
- /* 2025 N2 엔트리 리스트 표 스타일 */
-        #entry-list th, #entry-list td {
+        /* 기록 비교 하위 탭 */
+        .sub-tab-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .sub-tab-link {
+            padding: 8px 16px;
+            background-color: #eee;
+            margin-right: 8px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .sub-tab-link.active {
+            background-color: #abcae6;
+            font-weight: bold;
+        }
+
+        .sub-tab-content {
+            display: none;
+        }
+
+        .sub-tab-content.active {
+            display: block;
+        }
+
+        /* 전체 기록 표 스타일 */
+        #record {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        #record th,
+        #record td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        #record th {
+            background-color: #f2f2f2;
+        }
+
+        /* 전체 기록 표 열 너비 */
+        #record th:nth-child(1),
+        #record td:nth-child(1) {
+            width: 15%;
+            /* 엔트리 열 너비 */
+        }
+
+        #record th:nth-child(2),
+        #record td:nth-child(2) {
+            width: 35%;
+            /* 이름 열 너비 */
+        }
+
+        #record th:nth-child(3),
+        #record td:nth-child(3) {
+            width: 15%;
+            /* BL 열 너비 */
+        }
+
+        /* 2025 N2 엔트리 리스트 표 스타일 */
+        #entry-list th,
+        #entry-list td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: center;
@@ -184,1214 +253,1791 @@ table td, table th {
             background-color: #f2f2f2;
         }
 
-        #entry-list th:nth-child(1), #entry-list td:nth-child(1) {
-            width: 15%; /*2024 순위 열 너비 */
+        #entry-list th:nth-child(1),
+        #entry-list td:nth-child(1) {
+            width: 15%;
+            /*2024 순위 열 너비 */
         }
 
-        #entry-list th:nth-child(2), #entry-list td:nth-child(2) {
-            width: 10%; /* 엔트리 열 너비 */
+        #entry-list th:nth-child(2),
+        #entry-list td:nth-child(2) {
+            width: 10%;
+            /* 엔트리 열 너비 */
         }
 
-        #entry-list th:nth-child(3), #entry-list td:nth-child(3) {
-            width: 25%; /* 선수(생년) 열 너비 */
+        #entry-list th:nth-child(3),
+        #entry-list td:nth-child(3) {
+            width: 25%;
+            /* 선수(생년) 열 너비 */
         }
 
-        #entry-list th:nth-child(4), #entry-list td:nth-child(4) {
-            width: 35%; /* 소속 열 너비 */
+        #entry-list th:nth-child(4),
+        #entry-list td:nth-child(4) {
+            width: 35%;
+            /* 소속 열 너비 */
         }
+
+        /* 기타사항 - 버튼스타일 */
+        .btn2 {
+            background-color: #cc0011;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top:10px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn2:hover {
+            background-color: #b4b8db;
+        }
+
+        .weather-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .weather-card {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 130px;
+        }
+
+        /* 날씨 카드 스타일 */
+        .weather-card h3 {
+            margin-top: 0px;
+            /* 위쪽 여백 없음 */
+            margin-bottom: 10px;
+            /* 아래 여백 10px */
+            font-size: 16px;
+            /* 제목 글자 크기 */
+            color: #333;
+            /* 글자 색 (진한 회색) */
+        }
+
+        .weather-card img {
+            width: 50px;
+            /* 이미지 너비 50px */
+            height: 50px;
+            /* 이미지 높이 50px */
+        }
+
+        .temp {
+            font-weight: bold;
+            /* 굵은 글씨 */
+            font-size: 18px;
+            /* 온도 표시 글자 크기 */
+            margin: 5px 0;
+            /* 위/아래 여백 8px, 좌/우 없음 */
+        }
+
+        .desc {
+            font-size: 14px;
+            /* 설명 텍스트 크기 */
+            color: #666;
+            /* 연한 회색 텍스트 */
+        }
+
+        .weather-split {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .weather-split .half {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .rain {
+  font-size: 13px;
+  color: #555;
+  margin-top: 2px;
+}
 
     </style>
 </head>
+
 <body>
 
-    <h1>2025 HNF<br>(Round1_사전주행)</h1>
+    <h1>2025 HNF<br>Round1</h1>
 
     <div class="tab-links">
         <div class="tab-link active" onclick="showTab('time-table')">타임테이블</div>
-        <div class="tab-link" onclick="showTab('record-comparison')">기록 비교</div>
+        <div class="tab-link" onclick="showTab('record-comparison')">기록 보기</div>
         <div class="tab-link" onclick="showTab('other-info')">기타 사항</div>
     </div>
 
     <div class="tab-content" id="time-table">
         <h2>타임테이블</h2>
-        <h4>⏰  다음 일정까지</h4>
-        <div id="timer" class="timer">00:00:00</div> <!-- 타이머 표시 부분 -->
-        <div class="table-container">
-        <table id="timetable">
-            <thead>
-                <tr>
-                    <th>시간</th>
-                    <th>내용</th>
-                    <th>비고</th>
-                </tr>
-            </thead>
-            <tbody id="time-table-body">
-                <tr class="bold-row">
-                    <td>7:00 ~ 9:00 (120분)</td>
-                    <td>메디컬 체크</td>
-                    <td></td>
-                </tr>
-                <tr class="bold-row">
-                    <td>8:00 ~ 8:30 (30분)</td>
-                    <td>드라이버 브리핑</td>
-                    <td></td>
-                </tr>
-                <tr class="bold-row">
-                    <td>8:30 ~ 9:00 (30분)</td>
-                    <td>라이선스 이론 교육</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>9:00 ~ 9:25 (25분/5분)</td>
-                    <td>eN1 클래스(1차)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>9:30 ~ 9:55 (25분/5분)</td>
-                    <td>금호 N1 클래스(1차)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>10:00 ~ 10:25 (25분/5분)</td>
-                    <td>넥센 N2 클래스 A조(1차)</td>
-                    <td></td>
-                </tr>
-                <tr class="bold-row">
-                    <td>10:30 ~ 10:55 (25분/5분)</td>
-                    <td>넥센 N2 클래스 B조(1차)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>11:00 ~ 11:25 (25분/5분)</td>
-                    <td>eN1 클래스(2차)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>11:30 ~ 11:55 (25분/5분)</td>
-                    <td>금호 N1 클래스(2차)</td>
-                    <td></td>
-                </tr>
-                <tr class="bold-row">
-                    <td>12:00 ~ 12:40 (40분/5분)</td>
-                    <td>점심시간</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>12:45 ~ 13:10 (25분/5분)</td>
-                    <td>eN1 클래스(3차)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>13:15 ~ 13:40 (25분/5분)</td>
-                    <td>넥센 N2 클래스 A조(2차)</td>
-                    <td></td>
-                </tr>
-                <tr class="bold-row">
-                    <td>13:45 ~ 14:10 (25분/5분)</td>
-                    <td>넥센 N2 클래스 B조(2차)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>14:15 ~ 14:40 (25분/5분)</td>
-                    <td>금호 N1 클래스(3차)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>14:45 ~ 14:50 (5분)</td>
-                    <td>eN1 클래스</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>14:50 ~ 15:15 (25분/5분)</td>
-                    <td>eN1 클래스, 레이스 시뮬레이션</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>15:20 ~ 15:45 (25분/5분)</td>
-                    <td>금호 N1 클래스(4차)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>15:50 ~ 16:15 (25분/5분)</td>
-                    <td>넥센 N2 클래스 A조(3차)</td>
-                    <td></td>
-                </tr>
-                <tr class="bold-row">
-                    <td>16:20 ~ 16:45 (25분)</td>
-                    <td>넥센 N2 클래스 B조(3차)</td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+        <div id="current-time">현재 시각: </div>
+
+        <div class="sub-tab-links">
+            <div class="sub-tab-link active" onclick="showSubTab('friday')">5/16(금)</div>
+            <div class="sub-tab-link" onclick="showSubTab('saturday')">5/17(토)</div>
+            <div class="sub-tab-link" onclick="showSubTab('sunday')">5/18(일)</div>
+        </div>
+
+        <div class="sub-tab-content" id="friday">
+
+
+            <h4>⏰ 다음 일정까지</h4>
+            <div id="timer-friday" class="timer">00:00:00</div> <!-- 타이머 표시 부분 -->
+            <div class="table-container">
+                <table id="friday-time-table-body">
+                    <thead>
+                        <tr>
+                            <th>시간</th>
+                            <th>내용</th>
+                            <th>비고</th>
+                        </tr>
+                    </thead>
+                    <tbody id="time-table-body">
+                        <tr class="bold-row">
+                            <td>8:00 ~ 8:30 <span class="small-info">(30분)</span></td>
+                            <td>서킷 라이선스 교육</td>
+                            <td>피트동 2층 라운지</td>
+                        </tr>
+                        <tr>
+                            <td>9:00 ~ 9:25 (25분)</td>
+                            <td>그란 투리스모 eN1 클래스 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:30 ~ 9:55 (25분)</td>
+                            <td>금호 N1 클래스 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>10:00 ~ 10:25 (25분)</td>
+                            <td>넥센 N2 클래스 A조 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>10:30 ~ 10:55 (25분)</td>
+                            <td>넥센 N2 클래스 B조 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:00 ~ 11:25 (25분)</td>
+                            <td>그란 투리스모 eN1 클래스 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>11:30 ~ 12:20 (50분)</td>
+                            <td>점심시간</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:30 ~ 12:55 (25분)</td>
+                            <td>금호 N1 클래스 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>13:00 ~ 13:25 (25분)</td>
+                            <td>넥센 N2 클래스 A조 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>13:00 ~ 15:00 (120분)</td>
+                            <td>자율무게 검차 전 클래스</td>
+                            <td>검차장</td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>13:30 ~ 13:55 (25분)</td>
+                            <td>넥센 N2 클래스 B조 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>14:00 ~ 14:25 (25분)</td>
+                            <td>그란 투리스모 eN1 클래스 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>14:30 ~ 14:55 (25분)</td>
+                            <td>금호 N1 클래스 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>15:00 ~ 15:25 (25분)</td>
+                            <td>넥센 N2 클래스 A조 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>15:30 ~ 15:55 (25분)</td>
+                            <td>넥센 N2 클래스 B조 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>16:00 ~ 18:00 (180분)</td>
+                            <td>넥센 N2 클래스 검차</td>
+                            <td>검차장</td>
+                        </tr>
+                        <tr>
+                            <td>16:00 ~ 16:25 (25분)</td>
+                            <td>그란 투리스모 eN1 클래스 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>16:30 ~ 16:55 (25분)</td>
+                            <td>금호 N1 클래스 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>17:00 ~ 17:25 (25분)</td>
+                            <td>넥센 N2 클래스 A조 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>17:30 ~ 17:55 (25분)</td>
+                            <td>넥센 N2 클래스 B조 연습</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="sub-tab-content" id="saturday">
+
+            <h4>⏰ 다음 일정까지</h4>
+            <div id="timer-saturday" class="timer">00:00:00</div> <!-- 타이머 표시 부분 -->
+            <div class="table-container">
+                <table id="saturday-time-table-body">
+                    <thead>
+                        <tr>
+                            <th>시간</th>
+                            <th>내용</th>
+                            <th>비고</th>
+                        </tr>
+                    </thead>
+                    <tbody id="time-table-body">
+                        <tr class="bold-row">
+                            <td>7:30 ~ 9:00 (90분)</td>
+                            <td>메디컬 체크</td>
+                            <td>피트동 2층 라운지</td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>8:00 ~ 8:30 (30분)</td>
+                            <td>드라이버 브리핑</td>
+                            <td>피트동 2층 라운지</td>
+                        </tr>
+                        <tr>
+                            <td>8:30 ~ 9:00 (30분)</td>
+                            <td>서킷 라이선스 교육</td>
+                            <td>피트동 2층 라운지</td>
+                        </tr>
+                        <tr>
+                            <td>8:30 ~ 9:00 (30분)</td>
+                            <td>미검차 및 재검차 차량 검차</td>
+                            <td>eN1 클래스</td>
+                        </tr>
+                        <tr>
+                            <td>8:40 ~ 8:55 (15분)</td>
+                            <td>트랙 점검</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>9:00 ~ 10:00 (60분)</td>
+                            <td>미검차 및 재검차 차량 검차</td>
+                            <td>넥센 N2 클래스</td>
+                        </tr>
+                        <tr>
+                            <td>10:00 ~ 10:30 (30분)</td>
+                            <td>미검차 및 재검차 차량 검차</td>
+                            <td>금호 N1 클래스</td>
+                        </tr>
+                        <tr>
+                            <td>9:00 ~ 9:10 (10분)</td>
+                            <td>그란 투리스모 eN1 클래스 웜업</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>9:15 ~ 9:25 (10분)</td>
+                            <td>넥센 N2 클래스 A조 웜업</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>9:30 ~ 9:40 (10분)</td>
+                            <td>넥센 N2 클래스 B조 웜업</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:45 ~ 9:55 (10분)</td>
+                            <td>금호 N1 클래스 웜업</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:00 ~ 10:20 (20분)</td>
+                            <td>N 트랙데이 1차</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>10:30 ~ 10:50 (20분)</td>
+                            <td>넥센 N2 클래스 A조 예선</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>11:00 ~ 11:20 (20분)</td>
+                            <td>넥센 N2 클래스 B조 예선</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:30 ~ 11:50 (20분)</td>
+                            <td>금호 N1 클래스 예선</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:00 ~ 12:20 (20분)</td>
+                            <td>그란 투리스모 eN1 클래스 예선</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>12:30 ~ 12:40 (10분)</td>
+                            <td>그리드 워크</td>
+                            <td>차량 입장</td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>12:40 ~ 13:50 (70분)</td>
+                            <td>그리드 워크</td>
+                            <td>그리드 워크</td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>13:50 ~ 14:00 (10분)</td>
+                            <td>그리드 워크</td>
+                            <td>차량 퇴장</td>
+                        </tr>
+                        <tr>
+                            <td>14:10 ~ 14:15 (5분)</td>
+                            <td>금호 N1 클래스 결승</td>
+                            <td>PIT EXIT OPEN</td>
+                        </tr>
+                        <tr>
+                            <td>14:15 ~ 14:25 (10분)</td>
+                            <td>금호 N1 클래스 결승</td>
+                            <td>PIT EXIT CLOSE</td>
+                        </tr>
+                        <tr>
+                            <td>14:25 ~ 15:00 (35분)</td>
+                            <td>금호 N1 클래스 결승</td>
+                            <td>결승(14랩/60.844km)</td>
+                        </tr>
+                        <tr>
+                            <td>15:00 ~ 15:10 (10분)</td>
+                            <td>금호 N1 클래스 결승</td>
+                            <td>시상식</td>
+                        </tr>
+                        <tr>
+                            <td>15:10 ~ 15:30 (20분)</td>
+                            <td>N 트랙데이 2차</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>15:40 ~ 15:45 (5분)</td>
+                            <td>그란 투리스모 eN1 클래스 결승</td>
+                            <td>PIT EXIT OPEN</td>
+                        </tr>
+                        <tr>
+                            <td>15:45 ~ 15:55 (10분)</td>
+                            <td>그란 투리스모 eN1 클래스 결승</td>
+                            <td>PIT EXIT CLOSE</td>
+                        </tr>
+                        <tr>
+                            <td>15:55 ~ 16:20 (25분)</td>
+                            <td>그란 투리스모 eN1 클래스 결승</td>
+                            <td>결승(6랩/26.076km)</td>
+                        </tr>
+                        <tr>
+                            <td>16:20 ~ 16:30 (10분)</td>
+                            <td>그란 투리스모 eN1 클래스 결승</td>
+                            <td>시상식</td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>16:30 ~ 16:50 (20분)</td>
+                            <td>넥센 N2 클래스(마스터즈) 예선</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>17:00 ~ 17:20 (20분)</td>
+                            <td>N 트랙데이 3차</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="sub-tab-content" id="sunday">
+
+            <h4>⏰ 다음 일정까지</h4>
+            <div id="timer-sunday" class="timer">00:00:00</div> <!-- 타이머 표시 부분 -->
+            <div class="table-container">
+                <table id="sunday-time-table-body">
+                    <thead>
+                        <tr>
+                            <th>시간</th>
+                            <th>내용</th>
+                            <th>비고</th>
+                        </tr>
+                    </thead>
+                    <tbody id="time-table-body">
+                        <tr class="bold-row">
+                            <td>7:30 ~ 9:00 (90분)</td>
+                            <td>메디컬 체크</td>
+                            <td>피트동 2층 라운지</td>
+                        </tr>
+                        <tr>
+                            <td>8:30 ~ 9:00 (30분)</td>
+                            <td>서킷 라이선스 교육</td>
+                            <td>피트동 2층 라운지</td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>8:30 ~ 9:30 (60분)</td>
+                            <td>미검차 및 재검차 차량 검차</td>
+                            <td>넥센 N2 클래스</td>
+                        </tr>
+                        <tr>
+                            <td>8:40 ~ 8:55 (15분)</td>
+                            <td>트랙 점검</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:30 ~ 10:00 (30분)</td>
+                            <td>미검차 및 재검차 차량 검차</td>
+                            <td>eN1 클래스</td>
+                        </tr>
+                        <tr>
+                            <td>10:00 ~ 10:30 (30분)</td>
+                            <td>미검차 및 재검차 차량 검차</td>
+                            <td>금호 N1 클래스</td>
+                        </tr>
+                        <tr>
+                            <td>9:00 ~ 9:15 (15분)</td>
+                            <td>그란 투리스모 eN1 클래스 웜업</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:20 ~ 9:35 (15분)</td>
+                            <td>금호 N1 클래스 웜업</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>9:40 ~ 9:55 (15분)</td>
+                            <td>넥센 N2 클래스(챌린지1) 웜업</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>10:00 ~ 10:15 (15분)</td>
+                            <td>넥센 N2 클래스(마스터즈) 웜업</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:20 ~ 10:40 (20분)</td>
+                            <td>N 트랙데이 1차</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:50 ~ 11:10 (20분)</td>
+                            <td>그란 투리스모 eN1 클래스 예선</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:20 ~ 11:40 (20분)</td>
+                            <td>금호 N1 클래스 예선</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:50 ~ 12:10 (20분)</td>
+                            <td>N 트랙데이 2차</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>12:20 ~ 12:30 (10분)</td>
+                            <td>그리드 워크</td>
+                            <td>차량 입장</td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>12:30 ~ 13:20 (50분)</td>
+                            <td>그리드 워크</td>
+                            <td>그리드 워크</td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>13:20 ~ 13:30 (10분)</td>
+                            <td>그리드 워크</td>
+                            <td>차량 퇴장</td>
+                        </tr>
+                        <tr>
+                            <td>13:40 ~ 13:45 (5분)</td>
+                            <td>금호 N1 클래스 결승</td>
+                            <td>PIT EXIT OPEN</td>
+                        </tr>
+                        <tr>
+                            <td>13:45 ~ 13:55 (10분)</td>
+                            <td>금호 N1 클래스 결승</td>
+                            <td>PIT EXIT CLOSE</td>
+                        </tr>
+                        <tr>
+                            <td>13:55 ~ 14:30 (35분)</td>
+                            <td>금호 N1 클래스 결승</td>
+                            <td>결승(14랩/60.844km)</td>
+                        </tr>
+                        <tr>
+                            <td>14:30 ~ 14:40 (10분)</td>
+                            <td>금호 N1 클래스 결승</td>
+                            <td>시상식</td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>14:40 ~ 14:45 (5분)</td>
+                            <td>넥센 N2 클래스(마스터즈) 결승</td>
+                            <td>PIT EXIT OPEN</td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>14:45 ~ 14:55 (10분)</td>
+                            <td>넥센 N2 클래스(마스터즈) 결승</td>
+                            <td>PIT EXIT CLOSE</td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>14:55 ~ 15:30 (35분)</td>
+                            <td>넥센 N2 클래스(마스터즈) 결승</td>
+                            <td>결승(12랩/52.152km)</td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>15:30 ~ 15:40 (10분)</td>
+                            <td>넥센 N2 클래스(마스터즈) 결승</td>
+                            <td>시상식</td>
+                        </tr>
+                        <tr>
+                            <td>15:40 ~ 15:45 (5분)</td>
+                            <td>그란 투리스모 eN1 클래스 결승</td>
+                            <td>PIT EXIT OPEN</td>
+                        </tr>
+                        <tr>
+                            <td>15:45 ~ 15:55 (10분)</td>
+                            <td>그란 투리스모 eN1 클래스 결승</td>
+                            <td>PIT EXIT CLOSE</td>
+                        </tr>
+                        <tr>
+                            <td>15:55 ~ 16:20 (25분)</td>
+                            <td>그란 투리스모 eN1 클래스 결승</td>
+                            <td>결승(6랩/26.076km)</td>
+                        </tr>
+                        <tr>
+                            <td>16:20 ~ 16:30 (10분)</td>
+                            <td>그란 투리스모 eN1 클래스 결승</td>
+                            <td>시상식</td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>16:30 ~ 16:35 (5분)</td>
+                            <td>넥센 N2 클래스(챌린지1) 결승</td>
+                            <td>PIT EXIT OPEN</td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>16:35 ~ 16:45 (10분)</td>
+                            <td>넥센 N2 클래스(챌린지1) 결승</td>
+                            <td>PIT EXIT CLOSE</td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>16:45 ~ 17:15 (30분)</td>
+                            <td>넥센 N2 클래스(챌린지1) 결승</td>
+                            <td>결승(10랩/43.460km)</td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>17:15 ~ 17:25 (10분)</td>
+                            <td>넥센 N2 클래스(챌린지1) 결승</td>
+                            <td>시상식</td>
+                        </tr>
+                        <tr>
+                            <td>17:25 ~ 17:45 (20분)</td>
+                            <td>N 트랙데이 3차</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
     <div class="tab-content" id="record-comparison">
-    
 
-    <div class="sub-tab-links">
-        <div class="sub-tab-link active" onclick="showSubTab('personal-record')">개인 기록</div>
-        <div class="sub-tab-link" onclick="showSubTab('team-record')">전체 기록</div>
+
+        <div class="sub-tab-links">
+            <div class="sub-tab-link active" onclick="showSubTab('personal-record')">개인 기록</div>
+            <div class="sub-tab-link" onclick="showSubTab('team-record')">전체 기록</div>
+        </div>
+
+        <div class="sub-tab-content" id="personal-record">
+            <h3>#114 용인 에버랜드 스피드웨이(풀코스) 기록</h3>
+            <div class="table-container">
+                <p style="font-size: 20px; text-align: left; font-weight: bold; margin-left: 30px">🚗 2025 HNF Round 1 - 사전주행</p>
+                <p style="font-size: 15px; text-align: left; margin-left: 30px">2025년 4월 30일<br>최저 11도 / 최고 28도 / 대체로 맑음</p>
+
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>내용</th>
+                            <th>비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1차 주행 Best Lap</td>
+                            <td>2:21.439(7 Lap)</td>
+                            <td>F 26 / R 33 (20℃)<br>F 34,35 / R 38,39</td>
+                        </tr>
+                        <tr>
+                            <td>2차 주행 Best Lap</td>
+                            <td>2:21.607(1 Lap)</td>
+                            <td>F 26 / R 33 (25℃)<br>F 33,33.5 / R 37,37.5</td>
+                        </tr>
+                        <tr>
+                            <td>3차 주행 Best Lap</td>
+                            <td>2:22.496 (2 Lap)</td>
+                            <td>F 26 / R 33</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="table-container">
+                <p style="font-size: 20px; text-align: left; font-weight: bold; margin-left: 30px">🚗 2024 HNF Round 4 (race 3)</p>
+                <p style="font-size: 15px; text-align: left; margin-left: 30px">2024년 9월 28일<br>최저 18도 / 최고 28도 / 구름 조금</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>내용</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>예선 베스트 랩타임</td>
+                            <td>2:20.175 (4랩)</td>
+                        </tr>
+                        <tr>
+                            <td>예선 순위</td>
+                            <td>56위 (챌린지2 - 3그리드)</td>
+                        </tr>
+                        <tr>
+                            <td>출전대수</td>
+                            <td>72대</td>
+                        </tr>
+                        <tr>
+                            <td>1위 (이상진)</td>
+                            <td>2:16.625</td>
+                        </tr>
+                        <tr>
+                            <td>26위 (변정호)</td>
+                            <td>2:18.161 (+1.536)</td>
+                        </tr>
+                        <tr>
+                            <td>52위 (황용섭)</td>
+                            <td>2:19.965 (+3.340)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+        <div class="sub-tab-content" id="team-record" style="display:none;">
+            <h3>🚙 2025 시즌 출전 선수<br>2024 용인 풀코스 기록</h3>
+
+            <div class="table-container">
+                <table id="record">
+                    <thead>
+                        <tr>
+                            <th>엔트리</th>
+                            <th>이름</th>
+                            <th>용인 BL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>62</strong></td>
+                            <td>
+                                <strong>정상오</strong><br>
+                                <small>브라비오</small>
+                            </td>
+                            <td>2:17.073</td>
+                        </tr>
+                        <tr>
+                            <td><strong>7</strong></td>
+                            <td>
+                                <strong>오세웅</strong><br>
+                                <small>TeamHMC</small>
+                            </td>
+                            <td>2:17.260</td>
+                        </tr>
+                        <tr>
+                            <td><strong>6</strong></td>
+                            <td>
+                                <strong>김태희</strong><br>
+                                <small>브라비오</small>
+                            </td>
+                            <td>2:17.455</td>
+                        </tr>
+                        <tr>
+                            <td><strong>88</strong></td>
+                            <td>
+                                <strong>김동호</strong><br>
+                                <small>TeamHMC</small>
+                            </td>
+                            <td>2:17.597</td>
+                        </tr>
+                        <tr>
+                            <td><strong>14</strong></td>
+                            <td>
+                                <strong>김택준</strong><br>
+                                <small>Team 04</small>
+                            </td>
+                            <td>2:17.705</td>
+                        </tr>
+                        <tr>
+                            <td><strong>72</strong></td>
+                            <td>
+                                <strong>구준학</strong><br>
+                                <small>DCT Racing</small>
+                            </td>
+                            <td>2:17.728</td>
+                        </tr>
+                        <tr>
+                            <td><strong>40</strong></td>
+                            <td>
+                                <strong>박현준</strong><br>
+                                <small>드림레이서</small>
+                            </td>
+                            <td>2:17.832</td>
+                        </tr>
+                        <tr>
+                            <td><strong>18</strong></td>
+                            <td>
+                                <strong>이윤재</strong><br>
+                                <small>JBRT motorsport</small>
+                            </td>
+                            <td>2:17.840</td>
+                        </tr>
+                        <tr>
+                            <td><strong>16</strong></td>
+                            <td>
+                                <strong>신찬</strong><br>
+                                <small>Team 04</small>
+                            </td>
+                            <td>2:17.847</td>
+                        </tr>
+                        <tr>
+                            <td><strong>193</strong></td>
+                            <td>
+                                <strong>오민홍</strong><br>
+                                <small>GHOST</small>
+                            </td>
+                            <td>2:17.878</td>
+                        </tr>
+                        <tr>
+                            <td><strong>96</strong></td>
+                            <td>
+                                <strong>신솔찬</strong><br>
+                                <small>TEAM HMC</small>
+                            </td>
+                            <td>2:17.977</td>
+                        </tr>
+                        <tr>
+                            <td><strong>32</strong></td>
+                            <td>
+                                <strong>김은석</strong><br>
+                                <small>H모터스레이싱팀</small>
+                            </td>
+                            <td>2:18.000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>80</strong></td>
+                            <td>
+                                <strong>김대규</strong><br>
+                                <small>개인</small>
+                            </td>
+                            <td>2:18.002</td>
+                        </tr>
+                        <tr>
+                            <td><strong>55</strong></td>
+                            <td>
+                                <strong>오영관(과니빠)</strong><br>
+                                <small>MSS</small>
+                            </td>
+                            <td>2:18.075</td>
+                        </tr>
+                        <tr>
+                            <td><strong>21</strong></td>
+                            <td>
+                                <strong>변정호</strong><br>
+                                <small>Chago 모터스</small>
+                            </td>
+                            <td>2:18.161</td>
+                        </tr>
+                        <tr>
+                            <td><strong>46</strong></td>
+                            <td>
+                                <strong>이준수(쎄게형)</strong><br>
+                                <small>학산모터스</small>
+                            </td>
+                            <td>2:18.193</td>
+                        </tr>
+                        <tr>
+                            <td><strong>95</strong></td>
+                            <td>
+                                <strong>장준혁</strong><br>
+                                <small>DCT Racing</small>
+                            </td>
+                            <td>2:18.194</td>
+                        </tr>
+                        <tr>
+                            <td><strong>198</strong></td>
+                            <td>
+                                <strong>이경남</strong><br>
+                                <small>GHOST</small>
+                            </td>
+                            <td>2:18.205</td>
+                        </tr>
+                        <tr>
+                            <td><strong>107</strong></td>
+                            <td>
+                                <strong>이팔우</strong><br>
+                                <small>개인</small>
+                            </td>
+                            <td>2:18.265</td>
+                        </tr>
+                        <tr>
+                            <td><strong>101</strong></td>
+                            <td>
+                                <strong>노치성(제네치스)</strong><br>
+                                <small>MKMOTORS&DRE</small>
+                            </td>
+                            <td>2:18.335</td>
+                        </tr>
+                        <tr>
+                            <td><strong>93</strong></td>
+                            <td>
+                                <strong>문형식</strong><br>
+                                <small>MKMOTORS&DRE</small>
+                            </td>
+                            <td>2:18.389</td>
+                        </tr>
+                        <tr>
+                            <td><strong>83</strong></td>
+                            <td>
+                                <strong>양상국</strong><br>
+                                <small>TEAM HMC</small>
+                            </td>
+                            <td>2:18.595</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3</strong></td>
+                            <td>
+                                <strong>최정균</strong><br>
+                                <small>N Club Korea</small>
+                            </td>
+                            <td>2:18.624</td>
+                        </tr>
+                        <tr>
+                            <td><strong>128</strong></td>
+                            <td>
+                                <strong>황준호</strong><br>
+                                <small>비앙코웍스</small>
+                            </td>
+                            <td>2:19.025</td>
+                        </tr>
+                        <tr>
+                            <td><strong>92</strong></td>
+                            <td>
+                                <strong>전보민</strong><br>
+                                <small>현대 엑스티어 레이싱팀</small>
+                            </td>
+                            <td>2:19.198</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4</strong></td>
+                            <td>
+                                <strong>조승</strong><br>
+                                <small>GR1D</small>
+                            </td>
+                            <td>2:19.369</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2</strong></td>
+                            <td>
+                                <strong>김주한</strong><br>
+                                <small>브랜뉴레이싱</small>
+                            </td>
+                            <td>2:19.571</td>
+                        </tr>
+                        <tr>
+                            <td><strong>199</strong></td>
+                            <td>
+                                <strong>양영하</strong><br>
+                                <small>GHOST</small>
+                            </td>
+                            <td>2:19.710</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5</strong></td>
+                            <td>
+                                <strong>고성욱</strong><br>
+                                <small>현대차는 이형우</small>
+                            </td>
+                            <td>2:19.825</td>
+                        </tr>
+                        <tr>
+                            <td><strong>56</strong></td>
+                            <td>
+                                <strong>황용섭</strong><br>
+                                <small>지크 유나이티드</small>
+                            </td>
+                            <td>2:19.965</td>
+                        </tr>
+                        <tr>
+                            <td><strong>23</strong></td>
+                            <td>
+                                <strong>성정한</strong><br>
+                                <small>이레인모터스포트</small>
+                            </td>
+                            <td>2:19.974</td>
+                        </tr>
+                        <tr>
+                            <td><strong>114</strong></td>
+                            <td>
+                                <strong>김영민</strong><br>
+                                <small>라온레이싱</small>
+                            </td>
+                            <td>2:20.175</td>
+                        </tr>
+                        <tr>
+                            <td><strong>160</strong></td>
+                            <td>
+                                <strong>윤성로</strong><br>
+                                <small>지크 유나이티드</small>
+                            </td>
+                            <td>2:20.801</td>
+                        </tr>
+                        <tr>
+                            <td><strong>79</strong></td>
+                            <td>
+                                <strong>박성환</strong><br>
+                                <small>브라비오</small>
+                            </td>
+                            <td>2:21.173</td>
+                        </tr>
+                        <tr>
+                            <td><strong>70</strong></td>
+                            <td>
+                                <strong>김가민</strong><br>
+                                <small>비앙코웍스</small>
+                            </td>
+                            <td>2:22.131</td>
+                        </tr>
+                        <tr>
+                            <td><strong>78</strong></td>
+                            <td>
+                                <strong>김재경</strong><br>
+                                <small>현대 엑스티어 레이싱</small>
+                            </td>
+                            <td>2:25.261</td>
+                        </tr>
+                        <tr>
+                            <td><strong>8</strong></td>
+                            <td>
+                                <strong>정진원</strong><br>
+                                <small>브라비오</small>
+                            </td>
+                            <td>2:25.873</td>
+                        </tr>
+                        <tr>
+                            <td><strong>29</strong></td>
+                            <td>
+                                <strong>권혁진</strong><br>
+                                <small>DCT Racing</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>194</strong></td>
+                            <td>
+                                <strong>이솔기</strong><br>
+                                <small>GHOST</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>197</strong></td>
+                            <td>
+                                <strong>장진택</strong><br>
+                                <small>GHOST</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>195</strong></td>
+                            <td>
+                                <strong>조드래곤</strong><br>
+                                <small>GHOST</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>31</strong></td>
+                            <td>
+                                <strong>노종인</strong><br>
+                                <small>H모터스 레이싱팀</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>99</strong></td>
+                            <td>
+                                <strong>박준영</strong><br>
+                                <small>JBRT motorsport</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>15</strong></td>
+                            <td>
+                                <strong>안순호</strong><br>
+                                <small>MKMOTORS&DRE</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>94</strong></td>
+                            <td>
+                                <strong>고진영</strong><br>
+                                <small>Team_PITSTART X 무한질주</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>58</strong></td>
+                            <td>
+                                <strong>이광호</strong><br>
+                                <small>Team_PITSTART X 무한질주</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>19</strong></td>
+                            <td>
+                                <strong>손동욱</strong><br>
+                                <small>개인</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>27</strong></td>
+                            <td>
+                                <strong>신승철</strong><br>
+                                <small>개인</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>77</strong></td>
+                            <td>
+                                <strong>이민주</strong><br>
+                                <small>개인</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>52</strong></td>
+                            <td>
+                                <strong>최영호</strong><br>
+                                <small>개인</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>9</strong></td>
+                            <td>
+                                <strong>장원석</strong><br>
+                                <small>다가스모터스</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>76</strong></td>
+                            <td>
+                                <strong>신일경</strong><br>
+                                <small>드림레이서</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>106</strong></td>
+                            <td>
+                                <strong>김용성</strong><br>
+                                <small>레드콘 모터스포트</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>10</strong></td>
+                            <td>
+                                <strong>곽호준</strong><br>
+                                <small>범스</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>22</strong></td>
+                            <td>
+                                <strong>WANG WILLIAM DAVID</strong><br>
+                                <small>브라비오</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>74</strong></td>
+                            <td>
+                                <strong>박용진</strong><br>
+                                <small>비앙코웍스</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>128</strong></td>
+                            <td>
+                                <strong>황태민</strong><br>
+                                <small>비앙코웍스</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
     </div>
-
-    <div class="sub-tab-content" id="personal-record">
-        <h3>#114 기록</h3>
-        <div class="table-container">
-<p style="font-size: 20px; text-align: left; font-weight: bold; margin-left: 30px">2024 Round 4 (race 3)<br>용인(풀코스)</p>
-<p style="font-size: 15px; text-align: right; margin-right: 30px">9월 28일<br>최저 18도 / 최고 28도 / 구름 조금</p>
-
-
-<table>
-  <thead>
-    <tr>
-      <th>구분</th>
-      <th>내용</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>예선 베스트 랩타임</td>
-      <td>2:20.175 (4랩)</td>
-    </tr>
-    <tr>
-      <td>예선 순위</td>
-      <td>56위 (챌린지2 - 3그리드)</td>
-    </tr>
-    <tr>
-      <td>출전대수</td>
-      <td>72대</td>
-    </tr>
-    <tr>
-      <td>1위 (이상진)</td>
-      <td>2:16.625</td>
-    </tr>
-    <tr>
-      <td>26위 (변정호)</td>
-      <td>2:18.161 (+1.536)</td>
-    </tr>
-    <tr>
-      <td>52위 (황용섭)</td>
-      <td>2:19.965 (+3.340)</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-    </div>
-
-    <div class="sub-tab-content" id="team-record" style="display:none;">
-        <h3>2025 시즌 출전 선수<br>용인 풀코스 기록</h3>
-
-<div class="table-container">
-<table id="record">
-  <thead>
-    <tr>
-      <th>엔트리</th>
-      <th>이름</th>
-      <th>용인 BL</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>62</strong></td>
-      <td>
-        <strong>정상오</strong><br>
-        <small>브라비오</small>
-      </td>
-      <td>2:17.073</td>
-    </tr>
-    <tr>
-      <td><strong>7</strong></td>
-      <td>
-        <strong>오세웅</strong><br>
-        <small>TeamHMC</small>
-      </td>
-      <td>2:17.260</td>
-    </tr>
-    <tr>
-      <td><strong>6</strong></td>
-      <td>
-        <strong>김태희</strong><br>
-        <small>브라비오</small>
-      </td>
-      <td>2:17.455</td>
-    </tr>
-    <tr>
-      <td><strong>88</strong></td>
-      <td>
-        <strong>김동호</strong><br>
-        <small>TeamHMC</small>
-      </td>
-      <td>2:17.597</td>
-    </tr>
-    <tr>
-      <td><strong>14</strong></td>
-      <td>
-        <strong>김택준</strong><br>
-        <small>Team 04</small>
-      </td>
-      <td>2:17.705</td>
-    </tr>
-    <tr>
-      <td><strong>72</strong></td>
-      <td>
-        <strong>구준학</strong><br>
-        <small>DCT Racing</small>
-      </td>
-      <td>2:17.728</td>
-    </tr>
-    <tr>
-      <td><strong>40</strong></td>
-      <td>
-        <strong>박현준</strong><br>
-        <small>드림레이서</small>
-      </td>
-      <td>2:17.832</td>
-    </tr>
-    <tr>
-      <td><strong>18</strong></td>
-      <td>
-        <strong>이윤재</strong><br>
-        <small>JBRT motorsport</small>
-      </td>
-      <td>2:17.840</td>
-    </tr>
-    <tr>
-      <td><strong>16</strong></td>
-      <td>
-        <strong>신찬</strong><br>
-        <small>Team 04</small>
-      </td>
-      <td>2:17.847</td>
-    </tr>
-    <tr>
-      <td><strong>193</strong></td>
-      <td>
-        <strong>오민홍</strong><br>
-        <small>GHOST</small>
-      </td>
-      <td>2:17.878</td>
-    </tr>
-    <tr>
-      <td><strong>96</strong></td>
-      <td>
-        <strong>신솔찬</strong><br>
-        <small>TEAM HMC</small>
-      </td>
-      <td>2:17.977</td>
-    </tr>
-    <tr>
-      <td><strong>32</strong></td>
-      <td>
-        <strong>김은석</strong><br>
-        <small>H모터스레이싱팀</small>
-      </td>
-      <td>2:18.000</td>
-    </tr>
-    <tr>
-      <td><strong>80</strong></td>
-      <td>
-        <strong>김대규</strong><br>
-        <small>개인</small>
-      </td>
-      <td>2:18.002</td>
-    </tr>
-    <tr>
-      <td><strong>55</strong></td>
-      <td>
-        <strong>오영관(과니빠)</strong><br>
-        <small>MSS</small>
-      </td>
-      <td>2:18.075</td>
-    </tr>
-    <tr>
-      <td><strong>21</strong></td>
-      <td>
-        <strong>변정호</strong><br>
-        <small>Chago 모터스</small>
-      </td>
-      <td>2:18.161</td>
-    </tr>
-    <tr>
-      <td><strong>46</strong></td>
-      <td>
-        <strong>이준수(쎄게형)</strong><br>
-        <small>학산모터스</small>
-      </td>
-      <td>2:18.193</td>
-    </tr>
-    <tr>
-      <td><strong>95</strong></td>
-      <td>
-        <strong>장준혁</strong><br>
-        <small>DCT Racing</small>
-      </td>
-      <td>2:18.194</td>
-    </tr>
-    <tr>
-      <td><strong>198</strong></td>
-      <td>
-        <strong>이경남</strong><br>
-        <small>GHOST</small>
-      </td>
-      <td>2:18.205</td>
-    </tr>
-    <tr>
-      <td><strong>107</strong></td>
-      <td>
-        <strong>이팔우</strong><br>
-        <small>개인</small>
-      </td>
-      <td>2:18.265</td>
-    </tr>
-    <tr>
-      <td><strong>101</strong></td>
-      <td>
-        <strong>노치성(제네치스)</strong><br>
-        <small>MKMOTORS&DRE</small>
-      </td>
-      <td>2:18.335</td>
-    </tr>
-    <tr>
-      <td><strong>93</strong></td>
-      <td>
-        <strong>문형식</strong><br>
-        <small>MKMOTORS&DRE</small>
-      </td>
-      <td>2:18.389</td>
-    </tr>
-    <tr>
-      <td><strong>83</strong></td>
-      <td>
-        <strong>양상국</strong><br>
-        <small>TEAM HMC</small>
-      </td>
-      <td>2:18.595</td>
-    </tr>
-    <tr>
-      <td><strong>3</strong></td>
-      <td>
-        <strong>최정균</strong><br>
-        <small>N Club Korea</small>
-      </td>
-      <td>2:18.624</td>
-    </tr>
-    <tr>
-      <td><strong>128</strong></td>
-      <td>
-        <strong>황준호</strong><br>
-        <small>비앙코웍스</small>
-      </td>
-      <td>2:19.025</td>
-    </tr>
-    <tr>
-      <td><strong>92</strong></td>
-      <td>
-        <strong>전보민</strong><br>
-        <small>현대 엑스티어 레이싱팀</small>
-      </td>
-      <td>2:19.198</td>
-    </tr>
-    <tr>
-      <td><strong>4</strong></td>
-      <td>
-        <strong>조승</strong><br>
-        <small>GR1D</small>
-      </td>
-      <td>2:19.369</td>
-    </tr>
-    <tr>
-      <td><strong>2</strong></td>
-      <td>
-        <strong>김주한</strong><br>
-        <small>브랜뉴레이싱</small>
-      </td>
-      <td>2:19.571</td>
-    </tr>
-    <tr>
-      <td><strong>199</strong></td>
-      <td>
-        <strong>양영하</strong><br>
-        <small>GHOST</small>
-      </td>
-      <td>2:19.710</td>
-    </tr>
-    <tr>
-      <td><strong>5</strong></td>
-      <td>
-        <strong>고성욱</strong><br>
-        <small>현대차는 이형우</small>
-      </td>
-      <td>2:19.825</td>
-    </tr>
-    <tr>
-      <td><strong>56</strong></td>
-      <td>
-        <strong>황용섭</strong><br>
-        <small>지크 유나이티드</small>
-      </td>
-      <td>2:19.965</td>
-    </tr>
-    <tr>
-      <td><strong>23</strong></td>
-      <td>
-        <strong>성정한</strong><br>
-        <small>이레인모터스포트</small>
-      </td>
-      <td>2:19.974</td>
-    </tr>
-    <tr>
-      <td><strong>114</strong></td>
-      <td>
-        <strong>김영민</strong><br>
-        <small>라온레이싱</small>
-      </td>
-      <td>2:20.175</td>
-    </tr>
-    <tr>
-      <td><strong>160</strong></td>
-      <td>
-        <strong>윤성로</strong><br>
-        <small>지크 유나이티드</small>
-      </td>
-      <td>2:20.801</td>
-    </tr>
-    <tr>
-      <td><strong>79</strong></td>
-      <td>
-        <strong>박성환</strong><br>
-        <small>브라비오</small>
-      </td>
-      <td>2:21.173</td>
-    </tr>
-    <tr>
-      <td><strong>70</strong></td>
-      <td>
-        <strong>김가민</strong><br>
-        <small>비앙코웍스</small>
-      </td>
-      <td>2:22.131</td>
-    </tr>
-    <tr>
-      <td><strong>78</strong></td>
-      <td>
-        <strong>김재경</strong><br>
-        <small>현대 엑스티어 레이싱</small>
-      </td>
-      <td>2:25.261</td>
-    </tr>
-    <tr>
-      <td><strong>8</strong></td>
-      <td>
-        <strong>정진원</strong><br>
-        <small>브라비오</small>
-      </td>
-      <td>2:25.873</td>
-    </tr>
-    <tr>
-      <td><strong>29</strong></td>
-      <td>
-        <strong>권혁진</strong><br>
-        <small>DCT Racing</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>194</strong></td>
-      <td>
-        <strong>이솔기</strong><br>
-        <small>GHOST</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>197</strong></td>
-      <td>
-        <strong>장진택</strong><br>
-        <small>GHOST</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>195</strong></td>
-      <td>
-        <strong>조드래곤</strong><br>
-        <small>GHOST</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>31</strong></td>
-      <td>
-        <strong>노종인</strong><br>
-        <small>H모터스 레이싱팀</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>99</strong></td>
-      <td>
-        <strong>박준영</strong><br>
-        <small>JBRT motorsport</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>15</strong></td>
-      <td>
-        <strong>안순호</strong><br>
-        <small>MKMOTORS&DRE</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>94</strong></td>
-      <td>
-        <strong>고진영</strong><br>
-        <small>Team_PITSTART X 무한질주</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>58</strong></td>
-      <td>
-        <strong>이광호</strong><br>
-        <small>Team_PITSTART X 무한질주</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>19</strong></td>
-      <td>
-        <strong>손동욱</strong><br>
-        <small>개인</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>27</strong></td>
-      <td>
-        <strong>신승철</strong><br>
-        <small>개인</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>77</strong></td>
-      <td>
-        <strong>이민주</strong><br>
-        <small>개인</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>52</strong></td>
-      <td>
-        <strong>최영호</strong><br>
-        <small>개인</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>9</strong></td>
-      <td>
-        <strong>장원석</strong><br>
-        <small>다가스모터스</small>
-      </td>
-      <td>-</td>
-    </tr>
-    
-    <tr>
-      <td><strong>76</strong></td>
-      <td>
-        <strong>신일경</strong><br>
-        <small>드림레이서</small>
-      </td>
-      <td>-</td>
-    </tr>
-    
-    <tr>
-      <td><strong>106</strong></td>
-      <td>
-        <strong>김용성</strong><br>
-        <small>레드콘 모터스포트</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>10</strong></td>
-      <td>
-        <strong>곽호준</strong><br>
-        <small>범스</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>22</strong></td>
-      <td>
-        <strong>WANG WILLIAM DAVID</strong><br>
-        <small>브라비오</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>74</strong></td>
-      <td>
-        <strong>박용진</strong><br>
-        <small>비앙코웍스</small>
-      </td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><strong>128</strong></td>
-      <td>
-        <strong>황태민</strong><br>
-        <small>비앙코웍스</small>
-      </td>
-      <td>-</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-    </div>
-</div>
 
 
     <div class="tab-content" id="other-info">
-        <h2>2025 N2 엔트리 리스트(59명)</h2>
 
-    <div class="table-container">
-    <table id="entry-list">
-        <thead>
-            <tr>
-                <th>2024 순위</th>
-      <th>엔트리</th>
-    <th>선수</th>
-    <th>소속</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-    <td>1</td>
-    <td>6</td>
-    <td>김태희(82)</td>
-    <td>브라비오</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>62</td>
-    <td>정상오(88)</td>
-    <td>브라비오</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>46</td>
-    <td>이준수(88)</td>
-    <td>학산모터스</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>14</td>
-    <td>김택준(92)</td>
-    <td>Team 04</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>107</td>
-    <td>이팔우(82)</td>
-    <td>개인</td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>93</td>
-    <td>문형식(91)</td>
-    <td>MKMOTORS&amp;DRE</td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>40</td>
-    <td>박현준(82)</td>
-    <td>드림레이서</td>
-  </tr>
-  <tr>
-    <td>8</td>
-    <td>55</td>
-    <td>오영관(88)</td>
-    <td>MSS</td>
-  </tr>
-  <tr>
-    <td>9</td>
-    <td>88</td>
-    <td>김동호(00)</td>
-    <td>TeamHMC</td>
-  </tr>
-  <tr>
-    <td>10</td>
-    <td>72</td>
-    <td>구준학(72)</td>
-    <td>DCT Racing</td>
-  </tr>
-  <tr>
-    <td>11</td>
-    <td>101</td>
-    <td>노치성(91)</td>
-    <td>MKMOTORS&amp;DRE</td>
-  </tr>
-  <tr>
-    <td>12</td>
-    <td>193</td>
-    <td>오민홍(90)</td>
-    <td>GHOST</td>
-  </tr>
-  <tr>
-    <td>13</td>
-    <td>198</td>
-    <td>이경남(90)</td>
-    <td>GHOST</td>
-  </tr>
-  <tr>
-    <td>14</td>
-    <td>80</td>
-    <td>김대규(83)</td>
-    <td>개인</td>
-  </tr>
-  <tr>
-    <td>15</td>
-    <td>32</td>
-    <td>김은석(84)</td>
-    <td>H모터스레이싱팀</td>
-  </tr>
-  <tr>
-    <td>16</td>
-    <td>96</td>
-    <td>신솔찬(96)</td>
-    <td>TEAM HMC</td>
-  </tr>
-  <tr>
-    <td>17</td>
-    <td>95</td>
-    <td>장준혁(03)</td>
-    <td>DCT Racing</td>
-  </tr>
-  <tr>
-    <td>18</td>
-    <td>16</td>
-    <td>신찬(00)</td>
-    <td>Team 04</td>
-  </tr>
-  <tr>
-    <td>19</td>
-    <td>83</td>
-    <td>양상국(83)</td>
-    <td>TEAM HMC</td>
-  </tr>
-  <tr>
-    <td>20</td>
-    <td>18</td>
-    <td>이윤재(86)</td>
-    <td>JBRT motorsport</td>
-  </tr>
-  <tr>
-    <td>21</td>
-    <td>21</td>
-    <td>변정호(77)</td>
-    <td>Chago 모터스</td>
-  </tr>
-  <tr>
-    <td>22</td>
-    <td>7</td>
-    <td>오세웅(83)</td>
-    <td>TeamHMC</td>
-  </tr>
-  <tr>
-    <td>23</td>
-    <td>199</td>
-    <td>양영하(84)</td>
-    <td>GHOST</td>
-  </tr>
-  <tr>
-    <td>24</td>
-    <td>94</td>
-    <td>고진영(94)</td>
-    <td>Team_PITSTART X 무한질주</td>
-  </tr>
-  <tr>
-    <td>25</td>
-    <td>76</td>
-    <td>신일경(76)</td>
-    <td>드림레이서</td>
-  </tr>
-  <tr>
-    <td>26</td>
-    <td>4</td>
-    <td>조승(91)</td>
-    <td>GR1D</td>
-  </tr>
-  <tr>
-    <td>27</td>
-    <td>194</td>
-    <td>이솔기(99)</td>
-    <td>GHOST</td>
-  </tr>
-  <tr>
-    <td>28</td>
-    <td>160</td>
-    <td>윤성로(85)</td>
-    <td>지크 유나이티드</td>
-  </tr>
-  <tr>
-    <td>29</td>
-    <td>19</td>
-    <td>손동욱(74)</td>
-    <td>개인</td>
-  </tr>
-  <tr>
-    <td>30</td>
-    <td>92</td>
-    <td>전보민(99)</td>
-    <td>현대 엑스티어 레이싱팀</td>
-  </tr>
-  <tr>
-    <td>31</td>
-    <td>197</td>
-    <td>장진택(87)</td>
-    <td>GHOST</td>
-  </tr>
-  <tr>
-    <td>32</td>
-    <td>5</td>
-    <td>고성욱(00)</td>
-    <td>현대차는 이형우</td>
-  </tr>
-  <tr>
-    <td>33</td>
-    <td>128</td>
-    <td>황준호(96)</td>
-    <td>비앙코웍스</td>
-  </tr>
-  <tr>
-    <td>34</td>
-    <td>56</td>
-    <td>황용섭(91)</td>
-    <td>지크 유나이티</td>
-  </tr>
-  <tr>
-    <td>35</td>
-    <td>2</td>
-    <td>김주한(99)</td>
-    <td>브랜뉴레이싱</td>
-  </tr>
-  <tr>
-    <td>36</td>
-    <td>114</td>
-    <td>김영민(77)</td>
-    <td>라온레이싱</td>
-  </tr>
-  <tr>
-    <td>37</td>
-    <td>79</td>
-    <td>박성환(79)</td>
-    <td>브라비오</td>
-  </tr>
-  <tr>
-    <td>38</td>
-    <td>78</td>
-    <td>김재경(83)</td>
-    <td>현대 엑스티어 레이싱</td>
-  </tr>
-  <tr>
-    <td>39</td>
-    <td>3</td>
-    <td>최정균(84)</td>
-    <td>N Club Korea</td>
-  </tr>
-  <tr>
-    <td>40</td>
-    <td>23</td>
-    <td>성정한(89)</td>
-    <td>이레인모터스포트</td>
-  </tr>
-  <tr>
-    <td>41</td>
-    <td>8</td>
-    <td>정진원(88)</td>
-    <td>브라비오</td>
-  </tr>
-  <tr>
-    <td>42</td>
-    <td>58</td>
-    <td>이광호(91)</td>
-    <td>Team_PITSTART X 무한질주</td>
-  </tr>
-  <tr>
-    <td>43</td>
-    <td>70</td>
-    <td>김가민(98)</td>
-    <td>비앙코웍스</td>
-  </tr>
-  <tr>
-    <td>44</td>
-    <td>10</td>
-    <td>곽호준</td>
-    <td>범스</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>29</td>
-    <td>권혁진</td>
-    <td>DCT Racing</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>195</td>
-    <td>조드래곤</td>
-    <td>GHOST</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>31</td>
-    <td>노종인</td>
-    <td>H모터스 레이싱팀</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>99</td>
-    <td>박준영</td>
-    <td>JBRT motorsport</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>15</td>
-    <td>안순호</td>
-    <td>MKMOTORS&amp;DRE</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>77</td>
-    <td>이민주</td>
-    <td>개인</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>27</td>
-    <td>신승철</td>
-    <td>개인</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>52</td>
-    <td>최영호</td>
-    <td>개인</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>9</td>
-    <td>장원석</td>
-    <td>다가스모터스</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>106</td>
-    <td>김용성</td>
-    <td>레드콘 모터스포트</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>22</td>
-    <td>WANG WILLIAM DAVID</td>
-    <td>브라비오</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>74</td>
-    <td>박용진</td>
-    <td>비앙코웍스</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>38</td>
-    <td>고근준</td>
-    <td>용프로모터스</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>11</td>
-    <td>정현철</td>
-    <td>피카몰레이싱</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>85</td>
-    <td>신사용</td>
-    <td>현대 엑스티어 레이싱팀</td>
-  </tr>
-        </tbody>
-    </table>
-    </div>
+        <div class="sub-tab-links">
+            <div class="sub-tab-link active" onclick="showSubTab('entry')">엔트리 리스트</div>
+            <div class="sub-tab-link" onclick="showSubTab('3secondz')">쓰리세컨즈</div>
+            <div class="sub-tab-link" onclick="showSubTab('weather')">기상 예보</div>
+        </div>
+
+        <div class="sub-tab-content" id="entry">
+            <div class="table-container">
+                <table id="entry-list">
+                    <thead>
+                        <tr>
+                            <th>2024 순위</th>
+                            <th>엔트리</th>
+                            <th>선수</th>
+                            <th>소속</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>6</td>
+                            <td>김태희(82)</td>
+                            <td>브라비오</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>62</td>
+                            <td>정상오(88)</td>
+                            <td>브라비오</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>46</td>
+                            <td>이준수(88)</td>
+                            <td>학산모터스</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>14</td>
+                            <td>김택준(92)</td>
+                            <td>Team 04</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>107</td>
+                            <td>이팔우(82)</td>
+                            <td>개인</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>93</td>
+                            <td>문형식(91)</td>
+                            <td>MKMOTORS&amp;DRE</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>40</td>
+                            <td>박현준(82)</td>
+                            <td>드림레이서</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>55</td>
+                            <td>오영관(88)</td>
+                            <td>MSS</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>88</td>
+                            <td>김동호(00)</td>
+                            <td>TeamHMC</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>72</td>
+                            <td>구준학(72)</td>
+                            <td>DCT Racing</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>101</td>
+                            <td>노치성(91)</td>
+                            <td>MKMOTORS&amp;DRE</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>193</td>
+                            <td>오민홍(90)</td>
+                            <td>GHOST</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>198</td>
+                            <td>이경남(90)</td>
+                            <td>GHOST</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>80</td>
+                            <td>김대규(83)</td>
+                            <td>개인</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>32</td>
+                            <td>김은석(84)</td>
+                            <td>H모터스레이싱팀</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>96</td>
+                            <td>신솔찬(96)</td>
+                            <td>TEAM HMC</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>95</td>
+                            <td>장준혁(03)</td>
+                            <td>DCT Racing</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>16</td>
+                            <td>신찬(00)</td>
+                            <td>Team 04</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>83</td>
+                            <td>양상국(83)</td>
+                            <td>TEAM HMC</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>18</td>
+                            <td>이윤재(86)</td>
+                            <td>JBRT motorsport</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>21</td>
+                            <td>변정호(77)</td>
+                            <td>Chago 모터스</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>7</td>
+                            <td>오세웅(83)</td>
+                            <td>TeamHMC</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>199</td>
+                            <td>양영하(84)</td>
+                            <td>GHOST</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>94</td>
+                            <td>고진영(94)</td>
+                            <td>Team_PITSTART X 무한질주</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>76</td>
+                            <td>신일경(76)</td>
+                            <td>드림레이서</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>4</td>
+                            <td>조승(91)</td>
+                            <td>GR1D</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>194</td>
+                            <td>이솔기(99)</td>
+                            <td>GHOST</td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>160</td>
+                            <td>윤성로(85)</td>
+                            <td>지크 유나이티드</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>19</td>
+                            <td>손동욱(74)</td>
+                            <td>개인</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>92</td>
+                            <td>전보민(99)</td>
+                            <td>현대 엑스티어 레이싱팀</td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>197</td>
+                            <td>장진택(87)</td>
+                            <td>GHOST</td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>5</td>
+                            <td>고성욱(00)</td>
+                            <td>현대차는 이형우</td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>128</td>
+                            <td>황준호(96)</td>
+                            <td>비앙코웍스</td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>56</td>
+                            <td>황용섭(91)</td>
+                            <td>지크 유나이티</td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>2</td>
+                            <td>김주한(99)</td>
+                            <td>브랜뉴레이싱</td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>114</td>
+                            <td>김영민(77)</td>
+                            <td>라온레이싱</td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>79</td>
+                            <td>박성환(79)</td>
+                            <td>브라비오</td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>78</td>
+                            <td>김재경(83)</td>
+                            <td>현대 엑스티어 레이싱</td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>3</td>
+                            <td>최정균(84)</td>
+                            <td>N Club Korea</td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>23</td>
+                            <td>성정한(89)</td>
+                            <td>이레인모터스포트</td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>8</td>
+                            <td>정진원(88)</td>
+                            <td>브라비오</td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>58</td>
+                            <td>이광호(91)</td>
+                            <td>Team_PITSTART X 무한질주</td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td>70</td>
+                            <td>김가민(98)</td>
+                            <td>비앙코웍스</td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>10</td>
+                            <td>곽호준</td>
+                            <td>범스</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>29</td>
+                            <td>권혁진</td>
+                            <td>DCT Racing</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>195</td>
+                            <td>조드래곤</td>
+                            <td>GHOST</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>31</td>
+                            <td>노종인</td>
+                            <td>H모터스 레이싱팀</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>99</td>
+                            <td>박준영</td>
+                            <td>JBRT motorsport</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>15</td>
+                            <td>안순호</td>
+                            <td>MKMOTORS&amp;DRE</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>77</td>
+                            <td>이민주</td>
+                            <td>개인</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>27</td>
+                            <td>신승철</td>
+                            <td>개인</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>52</td>
+                            <td>최영호</td>
+                            <td>개인</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>9</td>
+                            <td>장원석</td>
+                            <td>다가스모터스</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>106</td>
+                            <td>김용성</td>
+                            <td>레드콘 모터스포트</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>22</td>
+                            <td>WANG WILLIAM DAVID</td>
+                            <td>브라비오</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>74</td>
+                            <td>박용진</td>
+                            <td>비앙코웍스</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>38</td>
+                            <td>고근준</td>
+                            <td>용프로모터스</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>11</td>
+                            <td>정현철</td>
+                            <td>피카몰레이싱</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>85</td>
+                            <td>신사용</td>
+                            <td>현대 엑스티어 레이싱팀</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="sub-tab-content" id="3secondz" style="display:none;">
+            <a href="https://hnf.3secondz.com/line/map?" target="_blank">
+                <button class="btn2">쓰리세컨즈 HNF LIVE 바로가기</button>
+            </a>
+
+        </div>
+
+
+        <div class="sub-tab-content" id="weather" style="display:none;">
+            <p style="font-size: 10px; text-align: right; margin-right: 20%; margin-bottom: 0px; margin-top: 15px;">update : 2025.05.12 / 경기 용인 처인구 포곡읍</p>
+            <div class="weather-container">
+                <div class="weather-card">
+                    <h3>5/16 (금)</h3>
+                    <p class="temp">15°C/24°C</p>
+                    <div class="weather-split">
+                        <div class="half">
+                            <p><strong>오전</strong></p>
+                            <img src="https://openweathermap.org/img/wn/04d.png" alt="흐림">
+                            <p class="desc">흐림</p>
+                            <p class="rain">💧 30%</p>
+                        </div>
+                        <div class="half">
+                            <p><strong>오후</strong></p>
+                            <img src="https://openweathermap.org/img/wn/04d.png" alt="흐림">
+                            <p class="desc">흐림</p>
+                            <p class="rain">💧 30%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weather-card">
+                    <h3>5/17 (토)</h3>
+                    <p class="temp">15°C/25°C</p>
+                    <div class="weather-split">
+                        <div class="half">
+                            <p><strong>오전</strong></p>
+                            <img src="https://openweathermap.org/img/wn/03d.png" alt="구름 많음">
+                            <p class="desc">구름 많음</p>
+                            <p class="rain">💧 30%</p>
+                        </div>
+                        <div class="half">
+                            <p><strong>오후</strong></p>
+                            <img src="https://openweathermap.org/img/wn/03d.png" alt="구름 많음">
+                            <p class="desc">구름 많음</p>
+                            <p class="rain">💧 40%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weather-card">
+                    <h3>5/18 (일)</h3>
+                    <p class="temp">13°C/23°C</p>
+                    <div class="weather-split">
+                        <div class="half">
+                            <p><strong>오전</strong></p>
+                            <img src="https://openweathermap.org/img/wn/03d.png" alt="구름 많음">
+                            <p class="desc">구름 많음</p>
+                            <p class="rain">💧 30%</p>
+                        </div>
+                        <div class="half">
+                            <p><strong>오후</strong></p>
+                            <img src="https://openweathermap.org/img/wn/10d.png" alt="비">
+                            <p class="desc">비</p>
+                            <p class="rain">💧 30%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
     </div>
 
     <script>
+        // ▶ 탭 메뉴 보여주기
         function showTab(tabId) {
-            const tabs = document.querySelectorAll('.tab-content');
-            const links = document.querySelectorAll('.tab-link');
+            const tabs = document.querySelectorAll('.tab-content'); // 모든 탭 콘텐츠 가져오기
+            const links = document.querySelectorAll('.tab-link'); // 모든 탭 링크 가져오기
 
+            // 모든 탭 숨기고, 선택한 탭만 보이기
             tabs.forEach(tab => {
-                if (tab.id === tabId) {
-                    tab.style.display = 'block';
-                } else {
-                    tab.style.display = 'none';
-                }
+                tab.style.display = (tab.id === tabId) ? 'block' : 'none';
             });
 
+            // 모든 링크에서 'active' 클래스 제거
             links.forEach(link => {
-                if (link.classList.contains('active')) {
-                    link.classList.remove('active');
-                }
+                link.classList.remove('active');
             });
 
+            // 클릭된 탭 링크에 'active' 클래스 추가
             document.querySelector(`.tab-link[onclick="showTab('${tabId}')"]`).classList.add('active');
         }
 
+        // ▶ 서브탭 보여주기
+        function showSubTab(subTabId) {
+            const subTabs = document.querySelectorAll('.sub-tab-content'); // 모든 서브탭 콘텐츠
+            const subLinks = document.querySelectorAll('.sub-tab-link'); // 모든 서브탭 링크
+
+            // 모든 서브탭 숨기고 선택한 것만 보이기
+            subTabs.forEach(tab => {
+                tab.style.display = (tab.id === subTabId) ? 'block' : 'none';
+            });
+
+            // 모든 링크에서 'active' 제거하고 클릭된 것만 추가
+            subLinks.forEach(link => link.classList.remove('active'));
+            document.querySelector(`.sub-tab-link[onclick="showSubTab('${subTabId}')"]`).classList.add('active');
+        }
+
+        // ▶ 현재 시간에 해당하는 행 강조 (예: 현재 시간과 맞는 이벤트에 색 넣기)
         function highlightCurrentEvent() {
-    const currentTime = new Date();
-    const timeRows = document.querySelectorAll('#time-table-body tr');
+            const currentTime = new Date();
+            const timeRows = document.querySelectorAll('#time-table-body tr');
 
-    timeRows.forEach(row => {
-        const timeText = row.cells[0].textContent.trim();
-        const match = timeText.match(/(\d{1,2}:\d{2})\s*~\s*(\d{1,2}:\d{2})/);
+            timeRows.forEach(row => {
+                const timeText = row.cells[0].textContent.trim();
+                const match = timeText.match(/(\d{1,2}:\d{2})\s*~\s*(\d{1,2}:\d{2})/);
 
-        if (match) {
-            const [_, startTime, endTime] = match;
-            const [startHour, startMinute] = startTime.split(':').map(Number);
-            const [endHour, endMinute] = endTime.split(':').map(Number);
+                if (match) {
+                    const [_, startTime, endTime] = match;
+                    const [startHour, startMinute] = startTime.split(':').map(Number);
+                    const [endHour, endMinute] = endTime.split(':').map(Number);
 
-            const startDate = new Date();
-            startDate.setHours(startHour, startMinute, 0, 0);
+                    const startDate = new Date();
+                    startDate.setHours(startHour, startMinute, 0, 0);
 
-            const endDate = new Date();
-            endDate.setHours(endHour, endMinute, 0, 0);
+                    const endDate = new Date();
+                    endDate.setHours(endHour, endMinute, 0, 0);
 
-            if (currentTime >= startDate && currentTime <= endDate) {
-                row.classList.add('highlight');
-            } else {
-                row.classList.remove('highlight');
+                    // 현재 시간이 범위 안이면 강조
+                    if (currentTime >= startDate && currentTime <= endDate) {
+                        row.classList.add('highlight');
+                    } else {
+                        row.classList.remove('highlight');
+                    }
+                } else {
+                    // 시간 형식 이상하면 강조 제거
+                    row.classList.remove('highlight');
+                }
+            });
+        }
+
+        // ▶ 다음 이벤트까지 남은 시간 타이머 표시
+        function updateTimer(day) {
+            const currentTime = new Date();
+            const timeTableBodyId = `${day}-time-table-body`; // 예: friday-time-table-body
+            const timeTableRows = [...document.querySelectorAll(`#${timeTableBodyId} tr`)];
+
+            // 다음 예정된 이벤트 찾기
+            const nextEventRow = timeTableRows.find(row => {
+                const timeCell = row.cells[0].textContent.split(' ')[0];
+                const [hour, minute] = timeCell.split(':').map(Number);
+                const eventDate = new Date();
+                eventDate.setHours(hour, minute, 0, 0);
+
+                const description = row.cells[1].textContent;
+
+                // 특정 클래스는 제외
+                if (
+                    description.includes('eN1 클래스') ||
+                    description.includes('금호 N1 클래스') ||
+                    description.includes('넥센 N2 클래스 A조')
+                ) {
+                    return false;
+                }
+
+                // 현재 시간보다 이후인 이벤트만 찾음
+                return currentTime < eventDate;
+            });
+
+            // 남은 시간 계산 및 타이머 표시
+            const timerElement = document.getElementById(`timer-${day}`);
+            if (nextEventRow && timerElement) {
+                const timeCell = nextEventRow.cells[0].textContent.split(' ')[0];
+                const [hour, minute] = timeCell.split(':').map(Number);
+                const nextEventTimeDate = new Date();
+                nextEventTimeDate.setHours(hour, minute, 0, 0);
+                const diff = nextEventTimeDate - currentTime;
+
+                const hours = Math.floor(diff / 1000 / 60 / 60);
+                const minutes = Math.floor((diff / 1000 / 60) % 60);
+                const seconds = Math.floor((diff / 1000) % 60);
+
+                timerElement.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            } else if (timerElement) {
+                // 다음 일정이 없을 때는 00:00:00 표시
+                timerElement.textContent = "00:00:00";
             }
-        } else {
-            // 만약 시간 형식이 이상하면 하이라이트 빼기
-            row.classList.remove('highlight');
-        }
-    });
-}
-
-
-        function updateTimer() {
-    const currentTime = new Date();
-    const nextEventRow = [...document.querySelectorAll('#time-table-body tr')].find(row => {
-        const timeCell = row.cells[0].textContent.split(' ')[0];
-        const [hour, minute] = timeCell.split(':').map(Number);
-        const eventDate = new Date();
-        eventDate.setHours(hour, minute, 0, 0);
-
-        const description = row.cells[1].textContent;
-
-        // 제외할 클래스 이름이 포함된 경우 건너뛴다
-        if (description.includes('eN1 클래스') || description.includes('금호 N1 클래스') || description.includes('넥센 N2 클래스 A조')) {
-            return false;
         }
 
-        // 현재 시간보다 미래면 후보
-        return currentTime < eventDate;
-    });
-
-    if (nextEventRow) {
-        const timeCell = nextEventRow.cells[0].textContent.split(' ')[0];
-        const [hour, minute] = timeCell.split(':').map(Number);
-        const nextEventTimeDate = new Date();
-        nextEventTimeDate.setHours(hour, minute, 0, 0);
-        const diff = nextEventTimeDate - currentTime;
-
-        const hours = Math.floor(diff / 1000 / 60 / 60);
-        const minutes = Math.floor((diff / 1000 / 60) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
-        document.getElementById('timer').textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-    }
-}
-
-
+        // ▶ 매초마다 강조 및 타이머 업데이트
         setInterval(() => {
             highlightCurrentEvent();
-            updateTimer();
+            updateTimer('friday'); // 금요일 타이머
+            updateTimer('saturday'); // 토요일 타이머
+            updateTimer('sunday'); // 일요일 타이머
         }, 1000);
 
-        // 초기화
-        showTab('time-table');
-        function showSubTab(subTabId) {
-    const subTabs = document.querySelectorAll('.sub-tab-content');
-    const subLinks = document.querySelectorAll('.sub-tab-link');
+        // ▶  현재 시각 업데이트
+        function updateCurrentTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
 
-    subTabs.forEach(tab => {
-        if (tab.id === subTabId) {
-            tab.classList.add('active');
-        } else {
-            tab.classList.remove('active');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('current-time').textContent = `현재 시각: ${timeString}`;
         }
-    });
 
-    subLinks.forEach(link => {
-        link.classList.remove('active');
-    });
+        // 매초마다 갱신
+        setInterval(updateCurrentTime, 1000);
 
-    document.querySelector(`.sub-tab-link[onclick="showSubTab('${subTabId}')"]`).classList.add('active');
-}
-function showTab(tabId) {
-    // 모든 탭 숨기기
-    var tabs = document.querySelectorAll('.tab-content');
-    tabs.forEach(function(tab) {
-        tab.style.display = 'none';
-    });
+        // 처음 로드될 때도 한 번 실행
+        updateCurrentTime();
 
-    // 활성화된 탭 표시
-    document.getElementById(tabId).style.display = 'block';
+        // ▶ 페이지 열릴 때 기본 탭 보이기
+        showTab('time-table');
 
-    // 모든 탭 링크에서 active 클래스 제거
-    var tabLinks = document.querySelectorAll('.tab-link');
-    tabLinks.forEach(function(link) {
-        link.classList.remove('active');
-    });
-
-    // 클릭한 탭에 active 클래스 추가
-    event.target.classList.add('active');
-}
-
-function showSubTab(subTabId) {
-    // 모든 서브탭 숨기기
-    var subTabs = document.querySelectorAll('.sub-tab-content');
-    subTabs.forEach(function(subTab) {
-        subTab.style.display = 'none';
-    });
-
-    // 활성화된 서브탭 표시
-    document.getElementById(subTabId).style.display = 'block';
-
-    // 모든 서브탭 링크에서 active 클래스 제거
-    var subTabLinks = document.querySelectorAll('.sub-tab-link');
-    subTabLinks.forEach(function(link) {
-        link.classList.remove('active');
-    });
-
-    // 클릭한 서브탭에 active 클래스 추가
-    event.target.classList.add('active');
-}
-
-
+        // ▶ '기록비교' 탭 누르면 서브탭 중 '개인 기록' 자동 열기
+        document.querySelector('a[href="#record-comparison"]').addEventListener('click', function() {
+            showSubTab('personal-record');
+        });
     </script>
-    <script>
-document.querySelector('a[href="#record-comparison"]').addEventListener('click', function() {
-  // 기록비교 탭을 클릭했을 때
-  showSubTab('personal-record'); // 개인 기록을 자동으로 열어줌
-});
-</script>
+
 
 </body>
+
 </html>
