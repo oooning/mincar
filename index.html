@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2025 HNF Round1</title>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    
+    
+    
     <style>
         /* 기본 스타일 */
         body {
@@ -67,6 +70,12 @@
         }
 
         /* 작은글씨를 넣고 싶으면 <span class="small-info"></span> */
+
+        .next-event-name {
+            font-size: 0.8em;
+            font-weight: bold;
+            color: #e95724;
+        }
 
         @keyframes blink-slow {
             0% {
@@ -186,7 +195,6 @@
             /* 세 번째 열(비고 열) 너비 */
         }
 
-
         /* 타이머 스타일 */
         .timer {
             font-size: 25px;
@@ -224,8 +232,6 @@
         .sub-tab-content.active {
             display: block;
         }
-
-
 
         /* 전체 기록 표 스타일 */
         #record {
@@ -270,30 +276,23 @@
         #record430 th:nth-child(1),
         #record430 td:nth-child(1) {
             width: 10%;
-
         }
 
         #record430 th:nth-child(2),
         #record430 td:nth-child(2) {
             width: 10%;
             font-weight: bold;
-
         }
 
         #record430 th:nth-child(3),
         #record430 td:nth-child(3) {
             width: 15%;
-
         }
 
         #record430 th:nth-child(4),
         #record430 td:nth-child(4) {
             width: 20%;
-
         }
-
-
-
 
         /* 2025 N2 엔트리 리스트 표 스타일 */
         #entry-list th,
@@ -331,7 +330,7 @@
             /* 소속 열 너비 */
         }
 
-
+        /* Round1 엔트리 리스트 표 스타일 */
         #r1-entry-list th:nth-child(1),
         #r1-entry-list td:nth-child(1) {
             width: 13%;
@@ -368,7 +367,7 @@
             /* 사전주행기록 열 너비 */
         }
 
-        /* 기타사항 - 버튼스타일 */
+        /* 기타사항 - 버튼 스타일 */
         .btn2 {
             background-color: #cc0011;
             color: white;
@@ -385,6 +384,7 @@
             background-color: #b4b8db;
         }
 
+        /* 기상 예보 스타일 */
         .weather-container {
             display: flex;
             justify-content: center;
@@ -416,37 +416,26 @@
 
         /* 날씨 카드 스타일 */
         .weather-card h3 {
-            margin-top: 0px;
-            /* 위쪽 여백 없음 */
-            margin-bottom: 10px;
-            /* 아래 여백 10px */
-            font-size: 16px;
-            /* 제목 글자 크기 */
-            color: #333;
-            /* 글자 색 (진한 회색) */
+            margin-top: 0px;  /* 위쪽 여백 없음 */           
+            margin-bottom: 10px;  /* 아래 여백 10px */           
+            font-size: 16px;  /* 제목 글자 크기 */           
+            color: #333; /* 글자 색 (진한 회색) */            
         }
 
         .weather-card img {
-            width: 50px;
-            /* 이미지 너비 50px */
-            height: 50px;
-            /* 이미지 높이 50px */
+            width: 50px; /* 이미지 너비 50px */            
+            height: 50px; /* 이미지 높이 50px */            
         }
 
         .temp {
-            font-weight: bold;
-            /* 굵은 글씨 */
-            font-size: 18px;
-            /* 온도 표시 글자 크기 */
-            margin: 5px 0;
-            /* 위/아래 여백 8px, 좌/우 없음 */
+            font-weight: bold; /* 굵은 글씨 */            
+            font-size: 18px;  /* 온도 표시 글자 크기 */           
+            margin: 5px 0; /* 위/아래 여백 8px, 좌/우 없음 */           
         }
 
         .desc {
-            font-size: 14px;
-            /* 설명 텍스트 크기 */
-            color: #666;
-            /* 연한 회색 텍스트 */
+            font-size: 14px; /* 설명 텍스트 크기 */            
+            color: #666; /* 연한 회색 텍스트 */            
         }
 
         .weather-split {
@@ -465,36 +454,34 @@
             color: #555;
             margin-top: 2px;
         }
-        
+
         /* 셀 제목 색상 변경하기 */
-        
-        #friday-time-table-body th
-         {
-            background-color: #e5efe7; 
+        #friday-time-table-body th {
+            background-color: #e5efe7;
         }
-        #saturday-time-table-body th
-         {
-            background-color: #efeae5; 
+
+        #saturday-time-table-body th {
+            background-color: #efeae5;
         }
-        #sunday-time-table-body th
-         {
-            background-color: #e5eeef; 
+
+        #sunday-time-table-body th {
+            background-color: #e5eeef;
         }
-        #record th
-         {
-            background-color: #c4e1c1; 
+
+        #record th {
+            background-color: #c4e1c1;
         }
-        #record430 th
-         {
-            background-color: #f7efd3; 
+
+        #record430 th {
+            background-color: #f7efd3;
         }
-        #entry-list th
-         {
+
+        #entry-list th {
             background-color: #1d1d48;
             color: #ffffff;
         }
-        #r1-entry-list th
-         {
+
+        #r1-entry-list th {
             background-color: #6a394a;
             color: #ffffff;
         }
@@ -502,7 +489,10 @@
     </style>
 </head>
 
-<body>
+
+    
+    
+    <body>
 
     <h1>2025 HNF Round1</h1>
 
@@ -514,19 +504,18 @@
 
     <div class="tab-content" id="time-table">
         <h2>타임테이블</h2>
-        <div id="current-time">현재 시각: </div>
-
+        <div id="current-time" >현재 시각</div>
         <div class="sub-tab-links">
             <div class="sub-tab-link active" onclick="showSubTab('friday')">5/16 (금)</div>
             <div class="sub-tab-link" onclick="showSubTab('saturday')">5/17 (토)</div>
             <div class="sub-tab-link" onclick="showSubTab('sunday')">5/18 (일)</div>
         </div>
-
         <div class="sub-tab-content" id="friday">
-
-
             <h4>⏰ 다음 일정까지</h4>
             <div id="timer-friday" class="timer">00:00:00</div> <!-- 타이머 표시 부분 -->
+            <span class="next-event-name">
+                📢 다음 일정: <span id="event-desc-friday"></span>
+            </span>
             <div class="table-container">
                 <table id="friday-time-table-body">
                     <thead>
@@ -584,7 +573,7 @@
                         </tr>
                         <tr class="bold-row">
                             <td>13:00 ~ 15:00 (120분)</td>
-                            <td>자율무게 검차 전 클래스</td>
+                            <td>자율무게 검차(전 클래스)</td>
                             <td>검차장</td>
                         </tr>
                         <tr class="bold-row">
@@ -642,11 +631,12 @@
             </div>
         </div>
 
-
         <div class="sub-tab-content" id="saturday">
-
             <h4>⏰ 다음 일정까지</h4>
-            <div id="timer-saturday" class="timer">00:00:00</div> <!-- 타이머 표시 부분 -->
+            <div id="timer-saturday" class="timer">00:00:00</div> <!-- 타이머 표시 부분 -->            
+            <span class="next-event-name">
+                📢 다음 일정: <span id="event-desc-saturday"></span>
+            </span>            
             <div class="table-container">
                 <table id="saturday-time-table-body">
                     <thead>
@@ -674,23 +664,23 @@
                         </tr>
                         <tr>
                             <td>8:30 ~ 9:00 (30분)</td>
-                            <td>미검차 및 재검차 차량 검차</td>
-                            <td>eN1 클래스</td>
+                            <td>eN1 재검차 검차</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>8:40 ~ 8:55 (15분)</td>
                             <td>트랙 점검</td>
                             <td></td>
                         </tr>
-                        <tr class="bold-row">
+                        <tr>
                             <td>9:00 ~ 10:00 (60분)</td>
-                            <td>미검차 및 재검차 차량 검차</td>
-                            <td>넥센 N2 클래스</td>
+                            <td>N2 재검차 검차</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>10:00 ~ 10:30 (30분)</td>
-                            <td>미검차 및 재검차 차량 검차</td>
-                            <td>금호 N1 클래스</td>
+                            <td>N1 재검차 검차</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>9:00 ~ 9:10 (10분)</td>
@@ -811,11 +801,13 @@
                 </table>
             </div>
         </div>
-
+        
         <div class="sub-tab-content" id="sunday">
-
             <h4>⏰ 다음 일정까지</h4>
-            <div id="timer-sunday" class="timer">00:00:00</div> <!-- 타이머 표시 부분 -->
+            <div id="timer-sunday" class="timer">00:00:00</div> <!-- 타이머 표시 부분 -->            
+            <span class="next-event-name">
+                📢 다음 일정: <span id="event-desc-sunday"></span>
+            </span>            
             <div class="table-container">
                 <table id="sunday-time-table-body">
                     <thead>
@@ -838,8 +830,8 @@
                         </tr>
                         <tr class="bold-row">
                             <td>8:30 ~ 9:30 (60분)</td>
-                            <td>미검차 및 재검차 차량 검차</td>
-                            <td>넥센 N2 클래스</td>
+                            <td>N2 재검차 검차</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>8:40 ~ 8:55 (15분)</td>
@@ -848,13 +840,13 @@
                         </tr>
                         <tr>
                             <td>9:30 ~ 10:00 (30분)</td>
-                            <td>미검차 및 재검차 차량 검차</td>
-                            <td>eN1 클래스</td>
+                            <td>eN1 재검차 검차</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>10:00 ~ 10:30 (30분)</td>
-                            <td>미검차 및 재검차 차량 검차</td>
-                            <td>금호 N1 클래스</td>
+                            <td>N1 재검차 검차</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>9:00 ~ 9:15 (15분)</td>
@@ -1012,10 +1004,8 @@
 
         <div class="sub-tab-content" id="personal-record">
             <div class="table-container">
-
                 <h3>🚗 2025 HNF Round 1 - 사전주행</h3>
                 <p style="font-size: 15px; text-align: left; margin-left: 30px">2025년 4월 30일<br>최저 11도 / 최고 28도 / 대체로 맑음</p>
-
                 <table>
                     <thead>
                         <tr>
@@ -1044,11 +1034,9 @@
                 </table>
             </div>
 
-
             <div class="table-container">
                 <h3>🚗 2024 HNF Round 4 (race 3)</h3>
                 <p style="font-size: 15px; text-align: left; margin-left: 30px">2024년 9월 28일<br>최저 18도 / 최고 28도 / 구름 조금</p>
-
                 <table>
                     <thead>
                         <tr>
@@ -1084,12 +1072,10 @@
                     </tbody>
                 </table>
             </div>
-
         </div>
 
         <div class="sub-tab-content" id="team-record" style="display:none;">
             <h3>🚙 2025 시즌 출전 선수<br>2024 용인 기록</h3>
-
             <div class="table-container">
                 <table id="record">
                     <thead>
@@ -1561,7 +1547,6 @@
                     </tbody>
                 </table>
             </div>
-
         </div>
 
         <div class="sub-tab-content" id="record-430" style="display:none;">
@@ -1821,7 +1806,6 @@
                     </tbody>
                 </table>
             </div>
-
         </div>
     </div>
 
@@ -2208,31 +2192,30 @@
             </div>
         </div>
 
-
         <div class="sub-tab-content" id="3secondz" style="display:none;">
             <a href="https://hnf.3secondz.com/line/map?" target="_blank">
                 <button class="btn2">쓰리세컨즈 HNF LIVE 바로가기</button>
             </a>
-
         </div>
 
-
         <div class="sub-tab-content" id="weather" style="display:none;">
-            <p style="font-size: 10px; text-align: center; margin-bottom: 0px; margin-top: 20px;">update : 2025.05.13 / 경기 용인 처인구 포곡읍</p>
+            <!-- 날씨 이미지 참조용 링크 https://icons8.com/icons/set/weather--style-quill -->
+            <p style="font-size: 10px; text-align: center; margin-bottom: 0px; margin-top: 20px;">update : 2025.05.14 / 경기 용인 처인구 포곡읍</p>
             <div class="weather-container">
+                
                 <div class="weather-card">
                     <h3>5/16 (금)</h3>
-                    <p class="temp">16°C / 25°C</p>
+                    <p class="temp">16°C / 24°C</p>
                     <div class="weather-split">
                         <div class="half">
                             <p><strong>오전</strong></p>
-                            <img src="https://img.icons8.com/?size=80&id=kySy6JXa3ur8&format=png" alt="비">
+                            <img src="https://img.icons8.com/?size=80&id=kySy6JXa3ur8&format=png" alt="비"/>
                             <p class="desc">소나기</p>
                             <p class="rain">💧 84%</p>
                         </div>
                         <div class="half">
                             <p><strong>오후</strong></p>
-                            <img src="https://img.icons8.com/?size=80&id=cFHDZp4gXSPL&format=png" alt="약간 흐림">
+                            <img src="https://img.icons8.com/?size=80&id=cFHDZp4gXSPL&format=png" alt="약간 흐림"/>
                             <p class="desc">약간 흐림</p>
                             <p class="rain">💧 25%</p>
                         </div>
@@ -2241,17 +2224,17 @@
 
                 <div class="weather-card">
                     <h3>5/17 (토)</h3>
-                    <p class="temp">11°C / 25°C</p>
+                    <p class="temp">10°C / 25°C</p>
                     <div class="weather-split">
                         <div class="half">
                             <p><strong>오전</strong></p>
-                            <img src="https://img.icons8.com/?size=80&id=b2yyw6lImfSc&format=png" alt="대체로 흐림">
+                            <img src="https://img.icons8.com/?size=80&id=b2yyw6lImfSc&format=png" alt="대체로 흐림"/>
                             <p class="desc">대체로 흐림</p>
                             <p class="rain">💧 25%</p>
                         </div>
                         <div class="half">
                             <p><strong>오후</strong></p>
-                            <img src="https://img.icons8.com/?size=80&id=YdtAOmS2OipT&format=png" alt="대체로 맑음">
+                            <img src="https://img.icons8.com/?size=80&id=YdtAOmS2OipT&format=png" alt="대체로 맑음"/>
                             <p class="desc">대체로 맑음</p>
                             <p class="rain">💧 25%</p>
                         </div>
@@ -2260,27 +2243,23 @@
 
                 <div class="weather-card">
                     <h3>5/18 (일)</h3>
-                    <p class="temp">10°C / 24°C</p>
+                    <p class="temp">9°C / 23°C</p>
                     <div class="weather-split">
                         <div class="half">
                             <p><strong>오전</strong></p>
-                            <img src="https://img.icons8.com/?size=80&id=BPVSXVskE9eq&format=png" alt="대체로 맑고 쾌적">
+                            <img src="https://img.icons8.com/?size=80&id=BPVSXVskE9eq&format=png" alt="대체로 맑고 쾌적"/>
                             <p class="desc">대체로 맑고 쾌적</p>
                             <p class="rain">💧 0%</p>
                         </div>
                         <div class="half">
                             <p><strong>오후</strong></p>
-                            <img src="https://img.icons8.com/?size=80&id=tNlLueWbD1cS&format=png" alt="맑음">
+                            <img src="https://img.icons8.com/?size=80&id=tNlLueWbD1cS&format=png" alt="맑음"/>
                             <p class="desc">맑음</p>
                             <p class="rain">💧 0%</p>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- 날씨 이미지 참조용 링크 https://icons8.com/icons/set/weather--style-quill -->
-
-
+            </div>            
         </div>
 
         <div class="sub-tab-content" id="r1-entry" style="display:none;">
@@ -2761,14 +2740,12 @@
                 <p>26위~52위(26대) : 🥈 챌린지(1) 진출</p>
                 <p>53위~57위(5대) : 🥉 예선 탈락</p>
             </div>
-
-
         </div>
-
-
-
     </div>
 
+    
+    
+    
     <script>
         // ▶ 탭 메뉴 보여주기
         function showTab(tabId) {
@@ -2854,9 +2831,10 @@
 
                 // 특정 클래스는 제외
                 if (
-                    description.includes('eN1 클래스') ||
-                    description.includes('금호 N1 클래스') ||
+                    description.includes('eN1') ||
+                    description.includes('N1') ||
                     description.includes('라이선스') ||
+                    description.includes('트랙') ||
                     description.includes('넥센 N2 클래스 A조')
                 ) {
                     return false;
@@ -2865,7 +2843,11 @@
                 // 현재 시간보다 이후인 이벤트만 찾음
                 return currentTime < eventDate;
             });
-
+            const eventDescElement = document.getElementById(`event-desc-${day}`);
+            if (eventDescElement) {
+                const description = nextEventRow.cells[1].textContent.trim();
+                eventDescElement.textContent = description;
+            }
             // 남은 시간 계산 및 타이머 표시
             const timerElement = document.getElementById(`timer-${day}`);
             if (nextEventRow && timerElement) {
