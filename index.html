@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2025 HNF Round1</title>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
-    
-    
-    
+
+
+
     <style>
         /* 기본 스타일 */
         body {
@@ -416,26 +416,37 @@
 
         /* 날씨 카드 스타일 */
         .weather-card h3 {
-            margin-top: 0px;  /* 위쪽 여백 없음 */           
-            margin-bottom: 10px;  /* 아래 여백 10px */           
-            font-size: 16px;  /* 제목 글자 크기 */           
-            color: #333; /* 글자 색 (진한 회색) */            
+            margin-top: 0px;
+            /* 위쪽 여백 없음 */
+            margin-bottom: 10px;
+            /* 아래 여백 10px */
+            font-size: 16px;
+            /* 제목 글자 크기 */
+            color: #333;
+            /* 글자 색 (진한 회색) */
         }
 
         .weather-card img {
-            width: 50px; /* 이미지 너비 50px */            
-            height: 50px; /* 이미지 높이 50px */            
+            width: 50px;
+            /* 이미지 너비 50px */
+            height: 50px;
+            /* 이미지 높이 50px */
         }
 
         .temp {
-            font-weight: bold; /* 굵은 글씨 */            
-            font-size: 18px;  /* 온도 표시 글자 크기 */           
-            margin: 5px 0; /* 위/아래 여백 8px, 좌/우 없음 */           
+            font-weight: bold;
+            /* 굵은 글씨 */
+            font-size: 18px;
+            /* 온도 표시 글자 크기 */
+            margin: 5px 0;
+            /* 위/아래 여백 8px, 좌/우 없음 */
         }
 
         .desc {
-            font-size: 14px; /* 설명 텍스트 크기 */            
-            color: #666; /* 연한 회색 텍스트 */            
+            font-size: 14px;
+            /* 설명 텍스트 크기 */
+            color: #666;
+            /* 연한 회색 텍스트 */
         }
 
         .weather-split {
@@ -485,14 +496,13 @@
             background-color: #6a394a;
             color: #ffffff;
         }
-        
     </style>
 </head>
 
 
-    
-    
-    <body>
+
+
+<body>
 
     <h1>2025 HNF Round1</h1>
 
@@ -504,7 +514,7 @@
 
     <div class="tab-content" id="time-table">
         <h2>타임테이블</h2>
-        <div id="current-time" >현재 시각</div>
+        <div id="current-time">현재 시각</div>
         <div class="sub-tab-links">
             <div class="sub-tab-link active" onclick="showSubTab('friday')">5/16 (금)</div>
             <div class="sub-tab-link" onclick="showSubTab('saturday')">5/17 (토)</div>
@@ -633,10 +643,10 @@
 
         <div class="sub-tab-content" id="saturday">
             <h4>⏰ 다음 일정까지</h4>
-            <div id="timer-saturday" class="timer">00:00:00</div> <!-- 타이머 표시 부분 -->            
+            <div id="timer-saturday" class="timer">00:00:00</div> <!-- 타이머 표시 부분 -->
             <span class="next-event-name">
                 📢 다음 일정: <span id="event-desc-saturday"></span>
-            </span>            
+            </span>
             <div class="table-container">
                 <table id="saturday-time-table-body">
                     <thead>
@@ -801,13 +811,13 @@
                 </table>
             </div>
         </div>
-        
+
         <div class="sub-tab-content" id="sunday">
             <h4>⏰ 다음 일정까지</h4>
-            <div id="timer-sunday" class="timer">00:00:00</div> <!-- 타이머 표시 부분 -->            
+            <div id="timer-sunday" class="timer">00:00:00</div> <!-- 타이머 표시 부분 -->
             <span class="next-event-name">
                 📢 다음 일정: <span id="event-desc-sunday"></span>
-            </span>            
+            </span>
             <div class="table-container">
                 <table id="sunday-time-table-body">
                     <thead>
@@ -1000,9 +1010,39 @@
             <div class="sub-tab-link active" onclick="showSubTab('personal-record')">개인 기록</div>
             <div class="sub-tab-link" onclick="showSubTab('team-record')">2024 기록</div>
             <div class="sub-tab-link" onclick="showSubTab('record-430')">4.30 사전주행 기록</div>
+            <div class="sub-tab-link" onclick="showSubTab('record-516-1')"> ROUND 1 - 연습1차 기록</div>
+            <div class="sub-tab-link" onclick="showSubTab('record-516-2')"> ROUND 1 - 연습2차 기록</div>
+            <div class="sub-tab-link" onclick="showSubTab('record-516-3')"> ROUND 1 - 연습3차 기록</div>
+
         </div>
 
         <div class="sub-tab-content" id="personal-record">
+            <div class="table-container">
+                <h3>🚗 2025 HNF Round 1</h3>
+                <p style="font-size: 15px; text-align: left; margin-left: 30px">2025년 5월 16일<br>최저 -도 / 최고 -도 / 비</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>내용</th>
+                            <th>비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2차 연습 Best Lap</td>
+                            <td>2:42.964(7 Lap)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3차 연습 Best Lap</td>
+                            <td>2:43.123(8 Lap)</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
             <div class="table-container">
                 <h3>🚗 2025 HNF Round 1 - 사전주행</h3>
                 <p style="font-size: 15px; text-align: left; margin-left: 30px">2025년 4월 30일<br>최저 11도 / 최고 28도 / 대체로 맑음</p>
@@ -1807,6 +1847,780 @@
                 </table>
             </div>
         </div>
+
+        <div class="sub-tab-content" id="record-516-1" style="display:none;">
+            <h3>🚙 ROUND 1 - 연습1차</h3>
+            <span class="small-info">5/16(금) 10:30<br>기온: 21도 / 날씨: 비<br>차 막힘 이슈로 주행 못함</span>
+            <div class="table-container">
+                <table id="record516-1">
+                    <thead>
+                        <tr>
+                            <th>순위</th>
+                            <th>엔트리</th>
+                            <th>이름</th>
+                            <th>기록</th>
+                            <th>조</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>29</td>
+                            <td>권혁진</td>
+                            <td>2:31.029</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>62</td>
+                            <td>정상오</td>
+                            <td>2:35.727</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>52</td>
+                            <td>최영호</td>
+                            <td>2:35.753</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>66</td>
+                            <td>전현준</td>
+                            <td>2:35.774</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>95</td>
+                            <td>장준혁</td>
+                            <td>2:36.456</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>72</td>
+                            <td>구준학</td>
+                            <td>2:36.514</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>14</td>
+                            <td>김택준</td>
+                            <td>2:36.622</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>88</td>
+                            <td>김동호</td>
+                            <td>2:36.950</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>81</td>
+                            <td>이재연</td>
+                            <td>2:37.046</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>92</td>
+                            <td>전보민</td>
+                            <td>2:37.682</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>107</td>
+                            <td>이팔우</td>
+                            <td>2:37.983</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>58</td>
+                            <td>이광호</td>
+                            <td>2:38.403</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>7</td>
+                            <td>오세웅</td>
+                            <td>2:38.786</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>11</td>
+                            <td>정현철</td>
+                            <td>2:38.843</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>85</td>
+                            <td>신사용</td>
+                            <td>2:39.046</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>10</td>
+                            <td>곽호준</td>
+                            <td>2:39.212</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>19</td>
+                            <td>손동욱</td>
+                            <td>2:40.713</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>8</td>
+                            <td>정진원</td>
+                            <td>2:41.081</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>55</td>
+                            <td>과니빠</td>
+                            <td>2:41.728</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>77</td>
+                            <td>이민주</td>
+                            <td>2:41.915</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>99</td>
+                            <td>박준영</td>
+                            <td>2:43.923</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>22</td>
+                            <td>WANG</td>
+                            <td>2:48.923</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>42</td>
+                            <td>정재호</td>
+                            <td>2:56.600</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>128</td>
+                            <td>황준호</td>
+                            <td>3:13.614</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>23</td>
+                            <td>성정한</td>
+                            <td>3:15.056</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>74</td>
+                            <td>박용진</td>
+                            <td>-</td>
+                            <td>A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="sub-tab-content" id="record-516-2" style="display:none;">
+            <h3>🚙 ROUND 1 - 연습2차</h3>
+            <span class="small-info">5/16(금) 13:30<br>기온: 도 / 날씨: 비<br>B조 주행이 더 젖은 노면</span>
+            <div class="table-container">
+                <table id="record516-2">
+                    <thead>
+                        <tr>
+                            <th>순위</th>
+                            <th>엔트리</th>
+                            <th>이름</th>
+                            <th>기록</th>
+                            <th>조</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>29</td>
+                            <td>권혁진</td>
+                            <td>2:30.764</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>62</td>
+                            <td>정상오</td>
+                            <td>2:36.329</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>72</td>
+                            <td>구준학</td>
+                            <td>2:36.386</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>95</td>
+                            <td>장준혁</td>
+                            <td>2:36.673</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>78</td>
+                            <td>김재경</td>
+                            <td>2:36.898</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>14</td>
+                            <td>김택준</td>
+                            <td>2:37.256</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>88</td>
+                            <td>김동호</td>
+                            <td>2:37.378</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>92</td>
+                            <td>전보민</td>
+                            <td>2:37.873</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>81</td>
+                            <td>이재연</td>
+                            <td>2:38.267</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>66</td>
+                            <td>전현준</td>
+                            <td>2:38.873</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>194</td>
+                            <td>이솔기</td>
+                            <td>2:39.173</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>85</td>
+                            <td>신사용</td>
+                            <td>2:39.208</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>46</td>
+                            <td>쎄게형</td>
+                            <td>2:39.625</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>6</td>
+                            <td>김태희</td>
+                            <td>2:40.063</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>11</td>
+                            <td>정현철</td>
+                            <td>2:40.580</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>94</td>
+                            <td>고진영</td>
+                            <td>2:40.628</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>107</td>
+                            <td>이팔우</td>
+                            <td>2:40.681</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>70</td>
+                            <td>김가민</td>
+                            <td>2:41.072</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>9</td>
+                            <td>장원석</td>
+                            <td>2:41.102</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>19</td>
+                            <td>손동욱</td>
+                            <td>2:41.289</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>58</td>
+                            <td>이광호</td>
+                            <td>2:41.994</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>8</td>
+                            <td>정진원</td>
+                            <td>2:42.217</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>7</td>
+                            <td>오세웅</td>
+                            <td>2:42.770</td>
+                            <td>A</td>
+                        </tr>
+                        <tr style="color: #e95724; font-weight: bold;">
+                            <td>24</td>
+                            <td>114</td>
+                            <td>김영민</td>
+                            <td>2:42.964</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>99</td>
+                            <td>박준영</td>
+                            <td>2:43.645</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>77</td>
+                            <td>이민주</td>
+                            <td>2:43.984</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>128</td>
+                            <td>황준호</td>
+                            <td>2:44.012</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>32</td>
+                            <td>김은석</td>
+                            <td>2:44.420</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>55</td>
+                            <td>과니빠</td>
+                            <td>2:44.513</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>56</td>
+                            <td>황용섭</td>
+                            <td>2:45.086</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>42</td>
+                            <td>정재호</td>
+                            <td>2:46.024</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>40</td>
+                            <td>박현준</td>
+                            <td>2:46.225</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>76</td>
+                            <td>신일경</td>
+                            <td>2:47.549</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>22</td>
+                            <td>WANG</td>
+                            <td>2:51.622</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>74</td>
+                            <td>박용진</td>
+                            <td>3:10.678</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>50</td>
+                            <td>손중선</td>
+                            <td>-</td>
+                            <td>B</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="sub-tab-content" id="record-516-3" style="display:none;">
+            <h3>🚙 ROUND 1 - 연습3차</h3>
+            <span class="small-info">5/16(금) 15:30<br>기온: 도 / 날씨: 비<br></span>
+            <div class="table-container">
+                <table id="record516-3">
+                    <thead>
+                        <tr>
+                            <th>순위</th>
+                            <th>엔트리</th>
+                            <th>이름</th>
+                            <th>기록</th>
+                            <th>조</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>29</td>
+                            <td>권혁진</td>
+                            <td>2:33.431</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>6</td>
+                            <td>김태희</td>
+                            <td>2:37.243</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>14</td>
+                            <td>김택준</td>
+                            <td>2:37.343</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>15</td>
+                            <td>안순호</td>
+                            <td>2:37.377</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>72</td>
+                            <td>구준학</td>
+                            <td>2:37.557</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>66</td>
+                            <td>전현준</td>
+                            <td>2:37.734</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>9</td>
+                            <td>장원석</td>
+                            <td>2:38.050</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>93</td>
+                            <td>문형식</td>
+                            <td>2:38.713</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>81</td>
+                            <td>이재연</td>
+                            <td>2:38.877</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>52</td>
+                            <td>최영호</td>
+                            <td>2:38.900</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>62</td>
+                            <td>정상오</td>
+                            <td>2:39.052</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>101</td>
+                            <td>노치성</td>
+                            <td>2:39.108</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>194</td>
+                            <td>이솔기</td>
+                            <td>2:39.592</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>46</td>
+                            <td>쎄게형</td>
+                            <td>2:39.825</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>21</td>
+                            <td>변정호</td>
+                            <td>2:39.993</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>195</td>
+                            <td>조드래곤</td>
+                            <td>2:40.214</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>107</td>
+                            <td>이팔우</td>
+                            <td>2:40.510</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>88</td>
+                            <td>김동호</td>
+                            <td>2:40.602</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>58</td>
+                            <td>이광호</td>
+                            <td>2:40.656</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>85</td>
+                            <td>신사용</td>
+                            <td>2:40.768</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>70</td>
+                            <td>김가민</td>
+                            <td>2:41.108</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>38</td>
+                            <td>고근준</td>
+                            <td>2:41.146</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>94</td>
+                            <td>고진영</td>
+                            <td>2:41.196</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>8</td>
+                            <td>정진원</td>
+                            <td>2:41.441</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>19</td>
+                            <td>손동욱</td>
+                            <td>2:41.784</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>128</td>
+                            <td>황준호</td>
+                            <td>2:41.995</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>10</td>
+                            <td>곽호준</td>
+                            <td>2:42.648</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>55</td>
+                            <td>과니빠</td>
+                            <td>2:42.738</td>
+                            <td>B</td>
+                        </tr>
+                        <tr style="color: #e95724; font-weight: bold;">
+                            <td>29</td>
+                            <td>114</td>
+                            <td>김영민</td>
+                            <td>2:43.123</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>7</td>
+                            <td>오세웅</td>
+                            <td>2:43.204</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>74</td>
+                            <td>박용진</td>
+                            <td>2:44.053</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>193</td>
+                            <td>오민홍</td>
+                            <td>2:44.214</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>22</td>
+                            <td>WANG</td>
+                            <td>2:44.231</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>77</td>
+                            <td>이민주</td>
+                            <td>2:44.360</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>99</td>
+                            <td>박준영</td>
+                            <td>2:45.020</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>31</td>
+                            <td>노종인</td>
+                            <td>2:47.649</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>16</td>
+                            <td>신찬</td>
+                            <td>2:49.744</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>42</td>
+                            <td>정재호</td>
+                            <td>2:57.047</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>199</td>
+                            <td>양영하</td>
+                            <td>-</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>11</td>
+                            <td>정현철</td>
+                            <td>-</td>
+                            <td>A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
 
@@ -2202,20 +3016,20 @@
             <!-- 날씨 이미지 참조용 링크 https://icons8.com/icons/set/weather--style-quill -->
             <p style="font-size: 10px; text-align: center; margin-bottom: 0px; margin-top: 20px;">update : 2025.05.14 / 경기 용인 처인구 포곡읍</p>
             <div class="weather-container">
-                
+
                 <div class="weather-card">
                     <h3>5/16 (금)</h3>
                     <p class="temp">16°C / 24°C</p>
                     <div class="weather-split">
                         <div class="half">
                             <p><strong>오전</strong></p>
-                            <img src="https://img.icons8.com/?size=80&id=kySy6JXa3ur8&format=png" alt="비"/>
+                            <img src="https://img.icons8.com/?size=80&id=kySy6JXa3ur8&format=png" alt="비" />
                             <p class="desc">소나기</p>
                             <p class="rain">💧 84%</p>
                         </div>
                         <div class="half">
                             <p><strong>오후</strong></p>
-                            <img src="https://img.icons8.com/?size=80&id=cFHDZp4gXSPL&format=png" alt="약간 흐림"/>
+                            <img src="https://img.icons8.com/?size=80&id=cFHDZp4gXSPL&format=png" alt="약간 흐림" />
                             <p class="desc">약간 흐림</p>
                             <p class="rain">💧 25%</p>
                         </div>
@@ -2228,13 +3042,13 @@
                     <div class="weather-split">
                         <div class="half">
                             <p><strong>오전</strong></p>
-                            <img src="https://img.icons8.com/?size=80&id=b2yyw6lImfSc&format=png" alt="대체로 흐림"/>
+                            <img src="https://img.icons8.com/?size=80&id=b2yyw6lImfSc&format=png" alt="대체로 흐림" />
                             <p class="desc">대체로 흐림</p>
                             <p class="rain">💧 25%</p>
                         </div>
                         <div class="half">
                             <p><strong>오후</strong></p>
-                            <img src="https://img.icons8.com/?size=80&id=YdtAOmS2OipT&format=png" alt="대체로 맑음"/>
+                            <img src="https://img.icons8.com/?size=80&id=YdtAOmS2OipT&format=png" alt="대체로 맑음" />
                             <p class="desc">대체로 맑음</p>
                             <p class="rain">💧 25%</p>
                         </div>
@@ -2247,19 +3061,19 @@
                     <div class="weather-split">
                         <div class="half">
                             <p><strong>오전</strong></p>
-                            <img src="https://img.icons8.com/?size=80&id=BPVSXVskE9eq&format=png" alt="대체로 맑고 쾌적"/>
+                            <img src="https://img.icons8.com/?size=80&id=BPVSXVskE9eq&format=png" alt="대체로 맑고 쾌적" />
                             <p class="desc">대체로 맑고 쾌적</p>
                             <p class="rain">💧 0%</p>
                         </div>
                         <div class="half">
                             <p><strong>오후</strong></p>
-                            <img src="https://img.icons8.com/?size=80&id=tNlLueWbD1cS&format=png" alt="맑음"/>
+                            <img src="https://img.icons8.com/?size=80&id=tNlLueWbD1cS&format=png" alt="맑음" />
                             <p class="desc">맑음</p>
                             <p class="rain">💧 0%</p>
                         </div>
                     </div>
                 </div>
-            </div>            
+            </div>
         </div>
 
         <div class="sub-tab-content" id="r1-entry" style="display:none;">
@@ -2743,9 +3557,9 @@
         </div>
     </div>
 
-    
-    
-    
+
+
+
     <script>
         // ▶ 탭 메뉴 보여주기
         function showTab(tabId) {
