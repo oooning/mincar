@@ -309,25 +309,25 @@
         #entry-list th:nth-child(1),
         #entry-list td:nth-child(1) {
             width: 15%;
-            /*2024 순위 열 너비 */
+            /*엔트리 열 너비 */
         }
 
         #entry-list th:nth-child(2),
         #entry-list td:nth-child(2) {
-            width: 10%;
-            /* 엔트리 열 너비 */
+            width: 20%;
+            /* 선수명 열 너비 */
         }
 
         #entry-list th:nth-child(3),
         #entry-list td:nth-child(3) {
-            width: 25%;
-            /* 선수(생년) 열 너비 */
+            width: 40%;
+            /* 소속 열 너비 */
         }
 
         #entry-list th:nth-child(4),
         #entry-list td:nth-child(4) {
-            width: 35%;
-            /* 소속 열 너비 */
+            width: 15%;
+            /* 클래스 열 너비 */
         }
 
         /* Round1 엔트리 리스트 표 스타일 */
@@ -536,7 +536,7 @@
                         </tr>
                     </thead>
                     <tbody id="time-table-body">
-                        <tr class="bold-row">
+                        <tr>
                             <td>8:00 ~ 8:30 (30분)</td>
                             <td>서킷 라이선스</td>
                             <td>피트 건물 2층 라운지</td>
@@ -552,104 +552,139 @@
                             <td>피트 검차</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>9:00 ~ 12:00 (180분)</td>
-                            <td>넥센 N2 클래스 검차</td>
-                            <td>검차장</td>
-                        </tr>
-                        <tr class="bold-row">
-                            <td>13:00 ~ 15:00 (120분)</td>
-                            <td>자율무게검차</td>
-                            <td>검차장</td>
-                        </tr>
-                        <tr class="bold-row">
-                            <td>15:00 ~ 18:00 (180분)</td>
-                            <td>넥센 N2 클래스 검차</td>
-                            <td>검차장</td>
+                            <td>7:30 ~ 17:00(-분)</td>
+                            <td> 메디컬 체크</td>
+                            <td>컨트롤 타워 1층 메디컬 센터</td>
                         </tr>
                         <tr>
-                            <td>8:40 ~ 9:00 (20분)</td>
-                            <td>트랙 인스펙션</td>
+                            <td>8:00 ~ 8:30(30분)</td>
+                            <td> 서킷 라이선스 접수</td>
+                            <td>컨트롤 타워 1층 접수처</td>
+                        </tr>
+                        <tr>
+                            <td>8:00 ~ 8:30(30분)</td>
+                            <td>그란 투리스모 eN1 피트 검차</td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>9:00 ~ 9:20 (20분)</td>
-                            <td>그란 투리스모 eN1 클래스 연습</td>
-                            <td>1차</td>
-                        </tr>
-                        <tr>
-                            <td>9:25 ~ 9:45 (20분)</td>
-                            <td>금호 N1 클래스 연습</td>
-                            <td>1차</td>
+                            <td>8:30 ~ 9:00(30분)</td>
+                            <td>금호 N1 피트 검차</td>
+                            <td></td>
                         </tr>
                         <tr class="bold-row">
-                            <td>9:50 ~ 10:10 (20분)</td>
-                            <td>넥센 N2 클래스 A조 연습</td>
-                            <td>1차</td>
-                        </tr>
-                        <tr>
-                            <td>10:15 ~ 10:35 (20분)</td>
-                            <td>넥센 N2 클래스 B조 연습</td>
-                            <td>1차</td>
-                        </tr>
-                        <tr>
-                            <td>10:40 ~ 11:00 (20분)</td>
-                            <td>그란 투리스모 eN1 클래스 연습</td>
-                            <td>2차</td>
-                        </tr>
-                        <tr>
-                            <td>11:10 ~ 11:35 (25분)</td>
-                            <td>금호 N1 클래스 연습</td>
-                            <td>2차</td>
+                            <td>9:00 ~ 12:00(180분)</td>
+                            <td>넥센 N2,N3 검차장</td>
+                            <td></td>
                         </tr>
                         <tr class="bold-row">
-                            <td>11:45 ~ 12:35 (50분)</td>
+                            <td>13:00 ~ 15:00(120분)</td>
+                            <td> 자율무게검차</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>15:00 ~ 18:00(180분)</td>
+                            <td>넥센 N2,N3 검차장</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8:30 ~ 8:50(20분)</td>
+                            <td> 트랙 인스펙션</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:00 ~ 9:50(50분)</td>
+                            <td> 서킷 라이선스 교육</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8:30 ~ 8:50(20분)</td>
+                            <td> 트랙 인스펙션</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:00 ~ 9:20(20분)</td>
+                            <td>그란 투리스모 eN1 1차 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:25 ~ 9:45(20분)</td>
+                            <td>금호 N1 1차 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>9:50 ~ 10:10(20분)</td>
+                            <td>넥센 N2(챌린지) 1차 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:15 ~ 10:35(20분)</td>
+                            <td>넥센 N2(마스터즈) 1차 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:40 ~ 11:00(20분)</td>
+                            <td>넥센 N3 1차 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:05 ~ 11:25(20분)</td>
+                            <td>그란 투리스모 eN1 2차 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>11:35 ~ 12:25(50분)</td>
                             <td>점심시간</td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>11:45 ~ 12:15 (30분)</td>
-                            <td>eN1 / N1 클래스 드라이버 브리핑</td>
-                            <td>피트 건물 2층 라운지</td>
+                            <td>12:00 ~ 12:30(30분)</td>
+                            <td>그란 투리스모 eN1, 금호 N1 드라이버 브리핑</td>
+                            <td>컨트롤 타워 2층 라이선스 교육장</td>
+                        </tr>
+                        <tr>
+                            <td>12:35 ~ 12:55(20분)</td>
+                            <td>금호 N1 2차 연습</td>
+                            <td></td>
                         </tr>
                         <tr class="bold-row">
-                            <td>12:45 ~ 13:10 (25분)</td>
-                            <td>넥센 N2 클래스 A조 연습</td>
-                            <td>2차</td>
+                            <td>13:05 ~ 13:25(20분)</td>
+                            <td>넥센 N2(챌린지) 2차 연습</td>
+                            <td>eN1 타이어 마킹(기술)</td>
                         </tr>
                         <tr>
-                            <td>13:20 ~ 13:45 (25분)</td>
-                            <td>넥센 N2 클래스 B조 연습</td>
-                            <td>2차</td>
+                            <td>13:35 ~ 13:55(20분)</td>
+                            <td>넥센 N2(마스터즈) 2차 연습</td>
+                            <td>N1 타이어 마킹(기술)</td>
                         </tr>
                         <tr>
-                            <td>13:55 ~ 14:15 (20분)</td>
-                            <td>그란 투리스모 eN1 클래스 연습</td>
-                            <td>3차</td>
-                        </tr>
-                        <tr>
-                            <td>14:25 ~ 14:50 (25분)</td>
-                            <td>금호 N1 클래스 연습</td>
-                            <td>3차</td>
+                            <td>14:05 ~ 14:25(20분)</td>
+                            <td>넥센 N3 2차 연습</td>
+                            <td></td>
                         </tr>
                         <tr class="bold-row">
-                            <td>15:00 ~ 15:25 (25분)</td>
-                            <td>넥센 N2 클래스 A조 연습</td>
-                            <td>3차</td>
+                            <td>14:35 ~ 14:55(20분)</td>
+                            <td>그란 투리스모 eN1 3차 연습</td>
+                            <td>N2/N3 타이어 마킹(기술)</td>
                         </tr>
                         <tr>
-                            <td>15:35 ~ 16:00 (25분)</td>
-                            <td>넥센 N2 클래스 B조 연습</td>
-                            <td>3차</td>
+                            <td>15:05 ~ 15:25(20분)</td>
+                            <td>금호 N1 3차 연습</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>15:35 ~ 15:55(20분)</td>
+                            <td>넥센 N2(챌린지) 3차 연습</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>16:10 ~ 16:30 (20분)</td>
-                            <td>그란 투리스모 eN1 클래스 연습</td>
-                            <td>4차</td>
+                            <td>16:05 ~ 16:25(20분)</td>
+                            <td>넥센 N2(마스터즈) 3차 연습</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>16:40 ~ 17:05 (25분)</td>
-                            <td>금호 N1 클래스 연습</td>
-                            <td>4차</td>
+                            <td>16:35 ~ 16:55(20분)</td>
+                            <td>넥센 N3 3차 연습</td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
@@ -673,168 +708,168 @@
                     </thead>
                     <tbody id="time-table-body">
                         <tr class="bold-row">
-                            <td>7:30 ~ 9:00 (90분)</td>
-                            <td>메디컬 체크</td>
-                            <td>피트 건물 2층 라운지</td>
+                            <td>7:30 ~ 9:00(90분)</td>
+                            <td> 메디컬 체크</td>
+                            <td>컨트롤 타워 2층</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>8:00 ~ 8:30 (30분)</td>
-                            <td>드라이버 브리핑(N2 클래스)</td>
-                            <td>피트 건물 2층 라운지</td>
+                            <td>8:00 ~ 8:30(30분)</td>
+                            <td>넥센N2, N3 드라이버 브리핑</td>
+                            <td>컨트롤 타워 2층 라이선스 교육장</td>
                         </tr>
-                        <tr class="bold-row">
-                            <td>8:30 ~ 9:30 (60분)</td>
-                            <td>N2 재검차 검차</td>
+                        <tr>
+                            <td>8:30 ~ 9:30(60분)</td>
+                            <td>넥센 N2,N3 검차 (미검차 및 재검차)</td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>9:30 ~ 10:00 (30분)</td>
-                            <td>eN1 재검차 검차</td>
+                            <td>9:30 ~ 10:00(30분)</td>
+                            <td>그란 투리스모 eN1 </td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>10:00 ~ 10:30 (30분)</td>
-                            <td>N1 재검차 검차</td>
+                            <td>10:00 ~ 10:30(30분)</td>
+                            <td>금호 N1 </td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>7:40 ~ 8:00 (20분)</td>
-                            <td>트랙 인스펙션</td>
+                            <td>8:30 ~ 8:50(20분)</td>
+                            <td>전체 오피셜 트랙 인스펙션</td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>8:35 ~ 8:45 (10분)</td>
-                            <td>그란 투리스모 eN1 클래스 웜업</td>
-                            <td>웜업</td>
-                        </tr>
-                        <tr>
-                            <td>8:50 ~ 9:00 (10분)</td>
-                            <td>금호 N1 클래스 웜업</td>
-                            <td>웜업</td>
+                            <td>9:00 ~ 9:10(10분)</td>
+                            <td>그란 투리스모 eN1 웝업</td>
+                            <td></td>
                         </tr>
                         <tr class="bold-row">
-                            <td>9:05 ~ 9:15 (10분)</td>
-                            <td>넥센 N2 클래스 A조 웜업</td>
-                            <td>웜업</td>
+                            <td>9:15 ~ 9:25(10분)</td>
+                            <td>넥센 N2(마스터즈, 챌린지) 웜업</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>9:20 ~ 9:30 (10분)</td>
-                            <td>넥센 N2 클래스 B조 웜업</td>
-                            <td>웜업</td>
+                            <td>9:30 ~ 9:40(10분)</td>
+                            <td>금호 N1 웜업</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>9:40 ~ 10:00 (20분)</td>
-                            <td>금호 N1 클래스 예선</td>
-                            <td>예선</td>
+                            <td>9:45 ~ 9:55(10분)</td>
+                            <td>넥센 N3 웜업</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:05 ~ 10:25(20분)</td>
+                            <td>그란 투리스모 eN1 예선</td>
+                            <td>라이브 중계</td>
+                        </tr>
+                        <tr>
+                            <td>10:35 ~ 10:55(20분)</td>
+                            <td>넥센 N2(마스터즈) 예선</td>
+                            <td>라이브 중계</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>10:10 ~ 10:30 (20분)</td>
-                            <td>넥센 N2 클래스 A조 예선</td>
-                            <td>예선</td>
+                            <td>11:05 ~ 11:25(20분)</td>
+                            <td>넥센 N2(챌린지) 예선</td>
+                            <td>라이브 중계</td>
                         </tr>
                         <tr>
-                            <td>10:40 ~ 11:00 (20분)</td>
-                            <td>넥센 N2 클래스 B조 예선</td>
-                            <td>예선</td>
-                        </tr>
-                        <tr>
-                            <td>11:10 ~ 11:30 (20분)</td>
-                            <td>그란 투리스모 eN1 클래스 예선</td>
-                            <td>예선</td>
+                            <td>11:35 ~ 11:55(20분)</td>
+                            <td>넥센 N3 공식 기록 세션</td>
+                            <td></td>
                         </tr>
                         <tr class="bold-row">
-                            <td>11:40 ~ 11:50 (10분)</td>
-                            <td>그리드 워크</td>
+                            <td>12:15 ~ 12:25(10분)</td>
+                            <td>그리드 워크 </td>
                             <td>차량입장</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>11:50 ~ 12:50 (60분)</td>
+                            <td>12:25 ~ 13:35(70분)</td>
+                            <td>그리드 워크 </td>
                             <td>그리드 워크</td>
-                            <td>그리드워크</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>12:50 ~ 13:00 (10분)</td>
-                            <td>그리드 워크</td>
+                            <td>13:35 ~ 13:45(10분)</td>
+                            <td>그리드 워크 </td>
                             <td>차량퇴장</td>
                         </tr>
                         <tr>
-                            <td>13:10 ~ 13:15 (5분)</td>
-                            <td>금호 N1 클래스 결승</td>
-                            <td>PIT EXIT OPEN</td>
+                            <td>13:55 ~ 14:15(20분)</td>
+                            <td>넥센 N3 결승</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>13:15 ~ 13:25 (10분)</td>
-                            <td>금호 N1 클래스 결승</td>
-                            <td>PIT EXIT CLOSE</td>
-                        </tr>
-                        <tr>
-                            <td>13:25 ~ 14:00 (35분)</td>
-                            <td>금호 N1 클래스 결승</td>
-                            <td>결승 (14랩 / 60.844km)</td>
-                        </tr>
-                        <tr>
-                            <td>14:00 ~ 14:10 (10분)</td>
-                            <td>금호 N1 클래스 결승</td>
-                            <td>시상식</td>
-                        </tr>
-                        <tr class="bold-row">
-                            <td>14:10 ~ 14:15 (5분)</td>
-                            <td>넥센 N2 클래스(마스터즈) 결승</td>
-                            <td>PIT EXIT OPEN</td>
-                        </tr>
-                        <tr class="bold-row">
-                            <td>14:15 ~ 14:25 (10분)</td>
-                            <td>넥센 N2 클래스(마스터즈) 결승</td>
-                            <td>PIT EXIT CLOSE</td>
-                        </tr>
-                        <tr class="bold-row">
-                            <td>14:25 ~ 15:00 (35분)</td>
-                            <td>넥센 N2 클래스(마스터즈) 결승</td>
-                            <td>결승 (12랩 / 52.152km)</td>
-                        </tr>
-                        <tr class="bold-row">
-                            <td>15:00 ~ 15:10 (10분)</td>
-                            <td>넥센 N2 클래스(마스터즈) 결승</td>
+                            <td>14:25 ~ 14:35(10분)</td>
+                            <td>넥센 N3 결승</td>
                             <td>시상식</td>
                         </tr>
                         <tr>
-                            <td>15:10 ~ 15:15 (5분)</td>
-                            <td>그란 투리스모 eN1 클래스 결승</td>
+                            <td>14:35 ~ 14:55(20분)</td>
+                            <td>금호 N1 예선1</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>15:00 ~ 15:10(10분)</td>
+                            <td>금호 N1 예선2</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>15:20 ~ 15:25(5분)</td>
+                            <td>넥센 N2(마스터즈) 결승</td>
                             <td>PIT EXIT OPEN</td>
                         </tr>
                         <tr>
-                            <td>15:15 ~ 15:25 (10분)</td>
-                            <td>그란 투리스모 eN1 클래스 결승</td>
+                            <td>15:25 ~ 15:35(10분)</td>
+                            <td>넥센 N2(마스터즈) 결승</td>
                             <td>PIT EXIT CLOSE</td>
                         </tr>
                         <tr>
-                            <td>15:25 ~ 15:50 (25분)</td>
-                            <td>그란 투리스모 eN1 클래스 결승</td>
-                            <td>결승 (6랩 / 26.076km)</td>
+                            <td>15:35 ~ 16:10(35분)</td>
+                            <td>넥센 N2(마스터즈) 결승</td>
+                            <td>결승 (16랩 / 48.720km)</td>
                         </tr>
                         <tr>
-                            <td>15:50 ~ 16:00 (10분)</td>
-                            <td>그란 투리스모 eN1 클래스 결승</td>
+                            <td>16:10 ~ 16:20(10분)</td>
+                            <td>넥센 N2(마스터즈) 결승</td>
+                            <td>시상식</td>
+                        </tr>
+                        <tr>
+                            <td>16:20 ~ 16:25(5분)</td>
+                            <td>그란 투리스모 eN1 Race 1 결승</td>
+                            <td>PIT EXIT OPEN</td>
+                        </tr>
+                        <tr>
+                            <td>16:25 ~ 16:35(10분)</td>
+                            <td>그란 투리스모 eN1 Race 1 결승</td>
+                            <td>PIT EXIT CLOSE</td>
+                        </tr>
+                        <tr>
+                            <td>16:35 ~ 17:00(25분)</td>
+                            <td>그란 투리스모 eN1 Race 1 결승</td>
+                            <td>결승 (8랩 / 24.360km)</td>
+                        </tr>
+                        <tr>
+                            <td>17:00 ~ 17:10(10분)</td>
+                            <td>그란 투리스모 eN1 Race 1 결승</td>
                             <td>시상식</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>16:00 ~ 16:05 (5분)</td>
-                            <td>넥센 N2 클래스(챌린지) 결승</td>
+                            <td>17:10 ~ 17:15(5분)</td>
+                            <td>넥센 N2(챌린지) 결승</td>
                             <td>PIT EXIT OPEN</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>16:05 ~ 16:15 (10분)</td>
-                            <td>넥센 N2 클래스(챌린지) 결승</td>
+                            <td>17:15 ~ 17:25(10분)</td>
+                            <td>넥센 N2(챌린지) 결승</td>
                             <td>PIT EXIT CLOSE</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>16:15 ~ 16:45 (30분)</td>
-                            <td>넥센 N2 클래스(챌린지) 결승</td>
-                            <td>결승 (11랩 / 43.460km)</td>
+                            <td>17:25 ~ 17:55(30분)</td>
+                            <td>넥센 N2(챌린지) 결승</td>
+                            <td>결승 (13랩 / 39.585km)</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>16:45 ~ 16:55 (10분)</td>
-                            <td>넥센 N2 클래스(챌린지) 결승</td>
+                            <td>17:55 ~ 18:05(10분)</td>
+                            <td>넥센 N2(챌린지) 결승</td>
                             <td>시상식</td>
                         </tr>
                     </tbody>
@@ -859,169 +894,169 @@
                     </thead>
                     <tbody id="time-table-body">
                         <tr class="bold-row">
-                            <td>7:30 ~ 9:00 (90분)</td>
-                            <td>메디컬 체크</td>
-                            <td>피트 건물 2층 라운지</td>
+                            <td>7:30 ~ 9:00(90분)</td>
+                            <td> 메디컬 체크</td>
+                            <td>컨트롤 타워 2층</td>
                         </tr>
-                        <tr class="bold-row">
-                            <td>8:30 ~ 9:30 (60분)</td>
-                            <td>N2 재검차 검차</td>
+                        <tr>
+                            <td>8:30 ~ 9:30(60분)</td>
+                            <td>넥센 N2,N3 검차 (미검차 및 재검차)</td>
+                            <td>검차 (미검차 및 재검차)</td>
+                        </tr>
+                        <tr>
+                            <td>9:30 ~ 10:00(30분)</td>
+                            <td>그란 투리스모 eN1 검차 (미검차 및 재검차)</td>
+                            <td>검차 (미검차 및 재검차)</td>
+                        </tr>
+                        <tr>
+                            <td>10:00 ~ 10:30(30분)</td>
+                            <td>금호 N1 검차 (미검차 및 재검차)</td>
+                            <td>검차 (미검차 및 재검차)</td>
+                        </tr>
+                        <tr>
+                            <td>8:30 ~ 8:50(20분)</td>
+                            <td> 트랙 인스펙션</td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>9:30 ~ 10:00 (30분)</td>
-                            <td>eN1 재검차 검차</td>
+                            <td>9:00 ~ 9:10(10분)</td>
+                            <td>넥센 N3 웜업</td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>10:00 ~ 10:30 (30분)</td>
-                            <td>N1 재검차 검차</td>
+                            <td>9:15 ~ 9:25(10분)</td>
+                            <td>그란 투리스모 eN1 웜업</td>
+                            <td></td>
+                        </tr>
+                        <tr class="bold-row">
+                            <td>9:30 ~ 9:40(10분)</td>
+                            <td>넥센 N2(마스터즈, 챌린지) 웜업</td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>7:40 ~ 8:00 (20분)</td>
-                            <td>트랙 인스펙션</td>
+                            <td>9:45 ~ 9:55(10분)</td>
+                            <td>금호 N1 웜업</td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>8:35 ~ 8:45 (10분)</td>
-                            <td>그란 투리스모 eN1 클래스 웜업</td>
-                            <td>웜업</td>
+                            <td>10:00 ~ 10:20(20분)</td>
+                            <td>넥센 N3 공식 기록 세션</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>8:50 ~ 9:00 (10분)</td>
-                            <td>금호 N1 클래스 웜업</td>
-                            <td>웜업</td>
+                            <td>10:30 ~ 10:50(20분)</td>
+                            <td>넥센 N2(마스터즈) 예선</td>
+                            <td>라이브 중계</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>9:05 ~ 9:15 (10분)</td>
-                            <td>넥센 N2 클래스 A조 웜업</td>
-                            <td>웜업</td>
-                        </tr>
-                        <tr>
-                            <td>9:20 ~ 9:30 (10분)</td>
-                            <td>넥센 N2 클래스 B조 웜업</td>
-                            <td>웜업</td>
-                        </tr>
-                        <tr>
-                            <td>9:40 ~ 10:00 (20분)</td>
-                            <td>금호 N1 클래스 예선</td>
-                            <td>예선</td>
+                            <td>11:00 ~ 11:20(20분)</td>
+                            <td>넥센 N2(챌린지) 예선</td>
+                            <td>라이브 중계</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>10:10 ~ 10:30 (20분)</td>
-                            <td>넥센 N2 클래스 A조 예선</td>
-                            <td>예선</td>
-                        </tr>
-                        <tr>
-                            <td>10:40 ~ 11:00 (20분)</td>
-                            <td>넥센 N2 클래스 B조 예선</td>
-                            <td>예선</td>
-                        </tr>
-                        <tr>
-                            <td>11:10 ~ 11:30 (20분)</td>
-                            <td>그란 투리스모 eN1 클래스 예선</td>
-                            <td>예선</td>
-                        </tr>
-                        <tr class="bold-row">
-                            <td>11:40 ~ 11:50 (10분)</td>
-                            <td>그리드 워크</td>
+                            <td>11:40 ~ 11:50(10분)</td>
+                            <td>그리드 워크 </td>
                             <td>차량입장</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>11:50 ~ 12:50 (60분)</td>
+                            <td>11:50 ~ 13:00(70분)</td>
+                            <td>그리드 워크 </td>
                             <td>그리드 워크</td>
-                            <td>그리드워크</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>12:50 ~ 13:00 (10분)</td>
-                            <td>그리드 워크</td>
+                            <td>13:00 ~ 13:10(10분)</td>
+                            <td>그리드 워크 </td>
                             <td>차량퇴장</td>
                         </tr>
                         <tr>
-                            <td>13:10 ~ 13:15 (5분)</td>
-                            <td>금호 N1 클래스 결승</td>
+                            <td>13:20 ~ 13:40(20분)</td>
+                            <td>넥센 N3 결승</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>13:50 ~ 14:00(10분)</td>
+                            <td>넥센 N3 결승</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>14:00 ~ 14:05(5분)</td>
+                            <td>그란 투리스모 eN1 Race 2 결승</td>
                             <td>PIT EXIT OPEN</td>
                         </tr>
                         <tr>
-                            <td>13:15 ~ 13:25 (10분)</td>
-                            <td>금호 N1 클래스 결승</td>
+                            <td>14:05 ~ 14:15(10분)</td>
+                            <td>그란 투리스모 eN1 Race 2 결승</td>
                             <td>PIT EXIT CLOSE</td>
                         </tr>
                         <tr>
-                            <td>13:25 ~ 14:00 (35분)</td>
-                            <td>금호 N1 클래스 결승</td>
-                            <td>결승 (14랩 / 60.844km)</td>
+                            <td>14:15 ~ 14:40(25분)</td>
+                            <td>그란 투리스모 eN1 Race 2 결승</td>
+                            <td>결승 (8랩 / 24.360km)</td>
                         </tr>
                         <tr>
-                            <td>14:00 ~ 14:10 (10분)</td>
-                            <td>금호 N1 클래스 결승</td>
-                            <td>시상식</td>
-                        </tr>
-                        <tr class="bold-row">
-                            <td>14:10 ~ 14:15 (5분)</td>
-                            <td>넥센 N2 클래스(마스터즈) 결승</td>
-                            <td>PIT EXIT OPEN</td>
-                        </tr>
-                        <tr class="bold-row">
-                            <td>14:15 ~ 14:25 (10분)</td>
-                            <td>넥센 N2 클래스(마스터즈) 결승</td>
-                            <td>PIT EXIT CLOSE</td>
-                        </tr>
-                        <tr class="bold-row">
-                            <td>14:25 ~ 15:00 (35분)</td>
-                            <td>넥센 N2 클래스(마스터즈) 결승</td>
-                            <td>결승 (12랩 / 52.152km)</td>
-                        </tr>
-                        <tr class="bold-row">
-                            <td>15:00 ~ 15:10 (10분)</td>
-                            <td>넥센 N2 클래스(마스터즈) 결승</td>
+                            <td>14:40 ~ 14:50(10분)</td>
+                            <td>그란 투리스모 eN1 Race 2 결승</td>
                             <td>시상식</td>
                         </tr>
                         <tr>
-                            <td>15:10 ~ 15:15 (5분)</td>
-                            <td>그란 투리스모 eN1 클래스 결승</td>
+                            <td>14:50 ~ 14:55(5분)</td>
+                            <td>넥센 N2(마스터즈) 결승</td>
                             <td>PIT EXIT OPEN</td>
                         </tr>
                         <tr>
-                            <td>15:15 ~ 15:25 (10분)</td>
-                            <td>그란 투리스모 eN1 클래스 결승</td>
+                            <td>14:55 ~ 15:05(10분)</td>
+                            <td>넥센 N2(마스터즈) 결승</td>
                             <td>PIT EXIT CLOSE</td>
                         </tr>
                         <tr>
-                            <td>15:25 ~ 15:50 (25분)</td>
-                            <td>그란 투리스모 eN1 클래스 결승</td>
-                            <td>결승 (6랩 / 26.076km)</td>
+                            <td>15:05 ~ 15:40(35분)</td>
+                            <td>넥센 N2(마스터즈) 결승</td>
+                            <td>결승 (16랩 / 48.720km)</td>
                         </tr>
                         <tr>
-                            <td>15:50 ~ 16:00 (10분)</td>
-                            <td>그란 투리스모 eN1 클래스 결승</td>
+                            <td>15:40 ~ 15:50(10분)</td>
+                            <td>넥센 N2(마스터즈) 결승</td>
+                            <td>시상식</td>
+                        </tr>
+                        <tr>
+                            <td>15:50 ~ 15:55(5분)</td>
+                            <td>금호 N1 결승</td>
+                            <td>PIT EXIT OPEN</td>
+                        </tr>
+                        <tr>
+                            <td>15:55 ~ 16:05(10분)</td>
+                            <td>금호 N1 결승</td>
+                            <td>PIT EXIT CLOSE</td>
+                        </tr>
+                        <tr>
+                            <td>16:05 ~ 16:40(35분)</td>
+                            <td>금호 N1 결승</td>
+                            <td>결승 (19랩 / 57.855km)</td>
+                        </tr>
+                        <tr>
+                            <td>16:40 ~ 16:50(10분)</td>
+                            <td>금호 N1 결승</td>
                             <td>시상식</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>16:00 ~ 16:05 (5분)</td>
-                            <td>넥센 N2 클래스(챌린지) 결승</td>
+                            <td>16:50 ~ 16:55(5분)</td>
+                            <td>넥센 N2(챌린지) 결승</td>
                             <td>PIT EXIT OPEN</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>16:05 ~ 16:15 (10분)</td>
-                            <td>넥센 N2 클래스(챌린지) 결승</td>
+                            <td>16:55 ~ 17:05(10분)</td>
+                            <td>넥센 N2(챌린지) 결승</td>
                             <td>PIT EXIT CLOSE</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>16:15 ~ 16:45 (30분)</td>
-                            <td>넥센 N2 클래스(챌린지) 결승</td>
-                            <td>결승 (11랩 / 43.460km)</td>
+                            <td>17:05 ~ 17:35(30분)</td>
+                            <td>넥센 N2(챌린지) 결승</td>
+                            <td>결승 (13랩 / 39.585km)</td>
                         </tr>
                         <tr class="bold-row">
-                            <td>16:45 ~ 16:55 (10분)</td>
-                            <td>넥센 N2 클래스(챌린지) 결승</td>
+                            <td>17:35 ~ 17:45(10분)</td>
+                            <td>넥센 N2(챌린지) 결승</td>
                             <td>시상식</td>
-                        </tr>
-                        <tr>
-                            <td>17:30 ~ 18:30 (60분)</td>
-                            <td>시즌 챔피언 시상식</td>
-                            <td>전 클래스</td>
                         </tr>
                     </tbody>
                 </table>
@@ -2421,424 +2456,310 @@
             <div class="sub-tab-link active" onclick="showSubTab('entry')">전체 엔트리</div>
             <div class="sub-tab-link" onclick="showSubTab('3secondz')">라이브맵 링크</div>
             <div class="sub-tab-link" onclick="showSubTab('weather')">기상 예보</div>
-            <div class="sub-tab-link" onclick="showSubTab('r1-entry')">2025 R5&6 엔트리</div>
+            <div class="sub-tab-link" onclick="showSubTab('r1-entry')">안내사항(원본)</div>
         </div>
 
         <div class="sub-tab-content" id="entry">
-            <h3>2025 엔트리</h3>
+            <h3>2026 엔트리</h3>
             <span class="small-info"></span>
             <div class="table-container">
                 <table id="entry-list">
                     <thead>
                         <tr>
-                            <th>2024 순위</th>
                             <th>엔트리</th>
-                            <th>선수</th>
+                            <th>선수명</th>
                             <th>소속</th>
+                            <th>클래스</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>6</td>
-                            <td>김태희(82)</td>
-                            <td>브라비오</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>62</td>
-                            <td>정상오(88)</td>
-                            <td>브라비오</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>46</td>
-                            <td>이준수(쎄게형)(88)</td>
-                            <td>학산모터스</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>14</td>
-                            <td>김택준(92)</td>
-                            <td>Team 04</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>107</td>
-                            <td>이팔우(82)</td>
-                            <td>개인</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>93</td>
-                            <td>문형식(91)</td>
-                            <td>MKMOTORS&amp;DRE</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>40</td>
-                            <td>박현준(82)</td>
-                            <td>드림레이서</td>
-                        </tr>
-                        <tr>
                             <td>8</td>
-                            <td>55</td>
-                            <td>오영관(과니빠)(88)</td>
-                            <td>MSS</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>88</td>
-                            <td>김동호(00)</td>
-                            <td>TeamHMC</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>72</td>
-                            <td>구준학(72)</td>
-                            <td>DCT Racing</td>
+                            <td>손동욱(74)</td>
+                            <td>개인</td>
+                            <td>N2 - C</td>
                         </tr>
                         <tr>
                             <td>11</td>
-                            <td>101</td>
-                            <td>노치성(제네치스)(91)</td>
-                            <td>MKMOTORS&amp;DRE</td>
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td>193</td>
-                            <td>오민홍(90)</td>
-                            <td>GHOST</td>
-                        </tr>
-                        <tr>
-                            <td>13</td>
-                            <td>198</td>
-                            <td>이경남(90)</td>
-                            <td>GHOST</td>
-                        </tr>
-                        <tr>
-                            <td>14</td>
-                            <td>80</td>
-                            <td>김대규(83)</td>
-                            <td>개인</td>
-                        </tr>
-                        <tr>
-                            <td>15</td>
-                            <td>32</td>
-                            <td>김은석(84)</td>
-                            <td>H모터스레이싱팀</td>
-                        </tr>
-                        <tr>
-                            <td>16</td>
-                            <td>96</td>
-                            <td>신솔찬(96)</td>
-                            <td>TEAM HMC</td>
-                        </tr>
-                        <tr>
-                            <td>17</td>
-                            <td>95</td>
-                            <td>장준혁(03)</td>
-                            <td>DCT Racing</td>
-                        </tr>
-                        <tr>
-                            <td>18</td>
-                            <td>16</td>
-                            <td>신찬(00)</td>
-                            <td>Team 04</td>
-                        </tr>
-                        <tr>
-                            <td>19</td>
-                            <td>83</td>
-                            <td>양상국(83)</td>
-                            <td>TEAM HMC</td>
-                        </tr>
-                        <tr>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>이윤재(86)</td>
-                            <td>JBRT motorsport</td>
-                        </tr>
-                        <tr>
-                            <td>21</td>
-                            <td>21</td>
-                            <td>변정호(77)</td>
-                            <td>Chago 모터스</td>
-                        </tr>
-                        <tr>
-                            <td>22</td>
-                            <td>7</td>
-                            <td>오세웅(83)</td>
-                            <td>TeamHMC</td>
-                        </tr>
-                        <tr>
-                            <td>23</td>
-                            <td>199</td>
-                            <td>양영하(84)</td>
-                            <td>GHOST</td>
-                        </tr>
-                        <tr>
-                            <td>24</td>
-                            <td>94</td>
-                            <td>고진영(94)</td>
-                            <td>Team_PITSTART X 무한질주</td>
-                        </tr>
-                        <tr>
-                            <td>25</td>
-                            <td>76</td>
-                            <td>신일경(76)</td>
+                            <td>정현철(94)</td>
                             <td>드림레이서</td>
-                        </tr>
-                        <tr>
-                            <td>26</td>
-                            <td>4</td>
-                            <td>조승(91)</td>
-                            <td>GR1D</td>
-                        </tr>
-                        <tr>
-                            <td>27</td>
-                            <td>194</td>
-                            <td>이솔기(99)</td>
-                            <td>GHOST</td>
-                        </tr>
-                        <tr>
-                            <td>28</td>
-                            <td>160</td>
-                            <td>윤성로(85)</td>
-                            <td>지크 유나이티드</td>
-                        </tr>
-                        <tr>
-                            <td>29</td>
-                            <td>19</td>
-                            <td>손동욱(74)</td>
-                            <td>개인</td>
-                        </tr>
-                        <tr>
-                            <td>30</td>
-                            <td>92</td>
-                            <td>전보민(99)</td>
-                            <td>현대 엑스티어 레이싱팀</td>
+                            <td>N2 - C</td>
                         </tr>
                         <tr>
                             <td>31</td>
-                            <td>197</td>
-                            <td>장진택(87)</td>
-                            <td>GHOST</td>
+                            <td>노종인(90)</td>
+                            <td>H모터스</td>
+                            <td>N2 - C</td>
                         </tr>
                         <tr>
-                            <td>32</td>
-                            <td>5</td>
-                            <td>고성욱(00)</td>
-                            <td>현대차는 이형우</td>
-                        </tr>
-                        <tr>
-                            <td>33</td>
-                            <td>128</td>
-                            <td>황준호(96)</td>
-                            <td>비앙코웍스</td>
-                        </tr>
-                        <tr>
-                            <td>34</td>
-                            <td>56</td>
-                            <td>황용섭(91)</td>
-                            <td>지크 유나이티</td>
-                        </tr>
-                        <tr>
-                            <td>35</td>
-                            <td>2</td>
-                            <td>김주한(99)</td>
-                            <td>브랜뉴레이싱</td>
-                        </tr>
-                        <tr style="color: #e95724; font-weight: bold;">
-                            <td>36</td>
-                            <td>114</td>
-                            <td>김영민(77)</td>
-                            <td>라온레이싱</td>
-                        </tr>
-                        <tr>
-                            <td>37</td>
                             <td>79</td>
                             <td>박성환(79)</td>
                             <td>브라비오</td>
+                            <td>N2 - C</td>
                         </tr>
                         <tr>
-                            <td>38</td>
-                            <td>78</td>
-                            <td>김재경(83)</td>
-                            <td>현대 엑스티어 레이싱</td>
-                        </tr>
-                        <tr>
-                            <td>39</td>
-                            <td>3</td>
-                            <td>최정균(84)</td>
-                            <td>N Club Korea</td>
-                        </tr>
-                        <tr>
-                            <td>40</td>
-                            <td>23</td>
-                            <td>성정한(89)</td>
-                            <td>이레인모터스포트</td>
-                        </tr>
-                        <tr>
-                            <td>41</td>
-                            <td>8</td>
-                            <td>정진원(88)</td>
-                            <td>브라비오</td>
-                        </tr>
-                        <tr>
-                            <td>42</td>
-                            <td>58</td>
-                            <td>이광호(91)</td>
-                            <td>Team_PITSTART X 무한질주</td>
-                        </tr>
-                        <tr>
-                            <td>43</td>
-                            <td>70</td>
-                            <td>김가민(98)</td>
-                            <td>비앙코웍스</td>
-                        </tr>
-                        <tr>
-                            <td>44</td>
-                            <td>10</td>
-                            <td>곽호준(86)</td>
-                            <td>훅스N범스</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>22</td>
-                            <td>WANG WILLIAM DAVID(80)</td>
-                            <td>브라비오</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>38</td>
-                            <td>고근준(83)</td>
-                            <td>용프로모터스</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>29</td>
-                            <td>권혁진(04)</td>
-                            <td>DCT Racing</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>106</td>
-                            <td>김용성(80)</td>
-                            <td>레드콘 모터스포트</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>31</td>
-                            <td>노종인(90)</td>
-                            <td>H모터스 레이싱팀</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>74</td>
-                            <td>박용진(91)</td>
-                            <td>비앙코웍스</td>
-                        </tr>
-                        <tr>
-                            <td></td>
                             <td>99</td>
                             <td>박준영(84)</td>
-                            <td>JBRT motorsport</td>
+                            <td>JBRT MOTORSPORT</td>
+                            <td>N2 - C</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td>85</td>
-                            <td>박성욱(신사용)(85)</td>
-                            <td>현대 엑스티어 레이싱팀</td>
+                            <td>103</td>
+                            <td>강진()</td>
+                            <td>몰리스 X 학산모터스</td>
+                            <td>N2 - C</td>
+                        </tr>
+                        <tr style="color: #e95724; font-weight: bold;">
+                            <td>114</td>
+                            <td>김영민(77)</td>
+                            <td>라온레이싱</td>
+                            <td>N2 - C</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td>27</td>
-                            <td>신승철()</td>
-                            <td>개인</td>
+                            <td>128</td>
+                            <td>황준호(96)</td>
+                            <td>비앙코웍스 레이싱</td>
+                            <td>N2 - C</td>
                         </tr>
                         <tr>
-                            <td></td>
                             <td>15</td>
                             <td>안순호(89)</td>
-                            <td>MKMOTORS&amp;DRE</td>
+                            <td>드라이빙 레시피</td>
+                            <td>N2 - C / N3</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            <td>2</td>
+                            <td>김동호(00)</td>
+                            <td>TEAM HMC</td>
+                            <td>N2 - M</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>김태희(82)</td>
+                            <td>상신 브레이크</td>
+                            <td>N2 - M</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>오세웅(83)</td>
+                            <td>TEAM HMC</td>
+                            <td>N2 - M</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>변정호(77)</td>
+                            <td>찬스레이싱</td>
+                            <td>N2 - M</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>이솔기(99)</td>
+                            <td>용프로레이싱</td>
+                            <td>N2 - M</td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>김은석(84)</td>
+                            <td>H모터스</td>
+                            <td>N2 - M</td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>김보성(76)</td>
+                            <td>한끼그린 모터스포츠</td>
+                            <td>N2 - M</td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>고근준(83)</td>
+                            <td>용프로레이싱</td>
+                            <td>N2 - M</td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>이준수(88)</td>
+                            <td>몰리스 X 학산모터스</td>
+                            <td>N2 - M</td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>최영호(93)</td>
+                            <td>VOODOO LAP</td>
+                            <td>N2 - M</td>
+                        </tr>
+                        <tr>
+                            <td>72</td>
+                            <td>구준학(72)</td>
+                            <td>용프로레이싱</td>
+                            <td>N2 - M</td>
+                        </tr>
+                        <tr>
                             <td>77</td>
                             <td>이민주(89)</td>
                             <td>개인</td>
+                            <td>N2 - M</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td>9</td>
-                            <td>장원석(78)</td>
-                            <td>다가스모터스</td>
+                            <td>107</td>
+                            <td>이팔우(82)</td>
+                            <td>브라비오</td>
+                            <td>N2 - M</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td>11</td>
-                            <td>정현철(94)</td>
-                            <td>피카몰레이싱</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>195</td>
-                            <td>조용근(조드래곤)(88)</td>
-                            <td>GHOST</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>52</td>
-                            <td>최영호(93)</td>
+                            <td>4</td>
+                            <td>이혁기(78)</td>
                             <td>개인</td>
+                            <td>N3</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td>97</td>
-                            <td>김주렬(97)</td>
-                            <td>㈜화성기계</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>50</td>
-                            <td>손중선(89)</td>
-                            <td>청주N블루핸즈</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>188</td>
-                            <td>김종선(금기사)(88)</td>
-                            <td>금기사</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>17</td>
-                            <td>강신홍(98)</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>42</td>
-                            <td>정재호(82)</td>
-                            <td>다함 모터스</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>12</td>
-                            <td>Krapf Florian Markus(93)</td>
+                            <td>5</td>
+                            <td>김예원(93)</td>
                             <td>TEAM HMC</td>
+                            <td>N3</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            <td>9</td>
+                            <td>이준성(88)</td>
+                            <td>드라이빙 레시피</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>김세진(07)</td>
+                            <td>비앙코웍스 레이싱</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>원동규(01)</td>
+                            <td>드라이빙 레시피</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>정용욱(01)</td>
+                            <td>TEAM HMC</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>안준하(94)</td>
+                            <td>한끼그린 모터스포츠</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>조형기(02)</td>
+                            <td>한끼그린 모터스포츠</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
                             <td>51</td>
-                            <td>권세훈(93)</td>
-                            <td></td>
+                            <td>김학규(91)</td>
+                            <td>DCT RACING</td>
+                            <td>N3</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td>13</td>
-                            <td>신동민(88)</td>
-                            <td>이모션레이싱</td>
+                            <td>53</td>
+                            <td>제성욱(73)</td>
+                            <td>비테쎄모터스포츠</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
+                            <td>66</td>
+                            <td>JIN XING(93)</td>
+                            <td>JBRT MOTORSPORT</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
+                            <td>70</td>
+                            <td>김가민(98)</td>
+                            <td>비앙코웍스 레이싱</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
+                            <td>73</td>
+                            <td>박승현(02)</td>
+                            <td>이레인 레이싱</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
+                            <td>82</td>
+                            <td>주병구(82)</td>
+                            <td>드림레이서</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
+                            <td>88</td>
+                            <td>박성진(88)</td>
+                            <td>현대 엑스티어 레이싱팀</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
+                            <td>90</td>
+                            <td>서보성(90)</td>
+                            <td>포디엄레이싱</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
+                            <td>93</td>
+                            <td>이해성(93)</td>
+                            <td>드라이빙 레시피</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
+                            <td>102</td>
+                            <td>이우선(02)</td>
+                            <td>JBRT MOTORSPORT</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
+                            <td>106</td>
+                            <td>김용성(80)</td>
+                            <td>레드콘 모터스포트</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
+                            <td>169</td>
+                            <td>이규현(93)</td>
+                            <td>DCT RACING</td>
+                            <td>N3</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>윤갑희()</td>
+                            <td>드라이빙 레시피</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>오민홍(90)</td>
+                            <td>GHOST</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>69</td>
+                            <td>이문형()</td>
+                            <td>DCT RACING</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>71</td>
+                            <td>김지훈()</td>
+                            <td>드라이빙 레시피</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>85</td>
+                            <td>권휘준()</td>
+                            <td>JBRT MOTORSPORT</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>177</td>
+                            <td>이규환()</td>
+                            <td>SLDS MOTORSPORTS-FJR</td>
+                            <td>0</td>
                         </tr>
                     </tbody>
                 </table>
@@ -2849,7 +2770,7 @@
             <a href="https://hnf.jp-race.com/live/map" target="_blank">
                 <button class="btn2">HNF LIVE 바로가기</button>
             </a>
-          
+
         </div>
 
         <div class="sub-tab-content" id="weather" style="display:none;">
@@ -2917,411 +2838,32 @@
         </div>
 
         <div class="sub-tab-content" id="r1-entry" style="display:none;">
-            <h3>Round 5&6 N2 엔트리 리스트 (총 55명)</h3>
-            <span class=small-info>(1라운드 기록순)</span>
-            <div class="table-container">
-                <table id="r1-entry-list">
-                    <thead>
-                        <tr>
-                            <th>엔트리</th>
-                            <th>이름</th>
-                            <th>팀</th>
-                            <th>조</th>
-                            <th>Rnd1 B.LT</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>29</td>
-                            <td>권혁진</td>
-                            <td>DCT RACING</td>
-                            <td>A조</td>
-                            <td>2:17.779</td>
-                        </tr>
-                        <tr>
-                            <td>62</td>
-                            <td>정상오</td>
-                            <td>브라비오</td>
-                            <td>A조</td>
-                            <td>2:17.999</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>김태희</td>
-                            <td>브라비오</td>
-                            <td>B조</td>
-                            <td>2:18.088</td>
-                        </tr>
-                        <tr>
-                            <td>107</td>
-                            <td>이팔우</td>
-                            <td>브라비오</td>
-                            <td>A조</td>
-                            <td>2:18.205</td>
-                        </tr>
-                        <tr>
-                            <td>16</td>
-                            <td>신찬</td>
-                            <td>TEAM 04</td>
-                            <td>B조</td>
-                            <td>2:18.294</td>
-                        </tr>
-                        <tr>
-                            <td>14</td>
-                            <td>김택준</td>
-                            <td>TEAM 04</td>
-                            <td>B조</td>
-                            <td>2:18.576</td>
-                        </tr>
-                        <tr>
-                            <td>194</td>
-                            <td>이솔기</td>
-                            <td>GHOST</td>
-                            <td>B조</td>
-                            <td>2:19.012</td>
-                        </tr>
-                        <tr>
-                            <td>88</td>
-                            <td>김동호</td>
-                            <td>TEAM HMC</td>
-                            <td>B조</td>
-                            <td>2:19.028</td>
-                        </tr>
-                        <tr>
-                            <td>40</td>
-                            <td>박현준</td>
-                            <td>드림레이서</td>
-                            <td>A조</td>
-                            <td>2:19.035</td>
-                        </tr>
-                        <tr>
-                            <td>72</td>
-                            <td>구준학</td>
-                            <td>DCT RACING</td>
-                            <td>B조</td>
-                            <td>2:19.056</td>
-                        </tr>
-                        <tr>
-                            <td>93</td>
-                            <td>문형식</td>
-                            <td>MK MOTORS &amp; DRE</td>
-                            <td>B조</td>
-                            <td>2:19.453</td>
-                        </tr>
-                        <tr>
-                            <td>198</td>
-                            <td>이경남</td>
-                            <td>GHOST</td>
-                            <td>A조</td>
-                            <td>2:19.487</td>
-                        </tr>
-                        <tr>
-                            <td>94</td>
-                            <td>고진영</td>
-                            <td>Team_PITSTART X 무한질주</td>
-                            <td>A조</td>
-                            <td>2:19.507</td>
-                        </tr>
-                        <tr>
-                            <td>193</td>
-                            <td>오민홍</td>
-                            <td>GHOST</td>
-                            <td>A조</td>
-                            <td>2:19.578</td>
-                        </tr>
-                        <tr>
-                            <td>32</td>
-                            <td>김은석</td>
-                            <td>H 모터스 레이싱팀</td>
-                            <td>A조</td>
-                            <td>2:19.634</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>오세웅</td>
-                            <td>TEAM HMC</td>
-                            <td>B조</td>
-                            <td>2:19.680</td>
-                        </tr>
-                        <tr>
-                            <td>92</td>
-                            <td>전보민</td>
-                            <td>현대 엑스티어 레이싱팀</td>
-                            <td>A조</td>
-                            <td>2:19.717</td>
-                        </tr>
-                        <tr>
-                            <td>46</td>
-                            <td>쎄게형</td>
-                            <td>인터넷비교원&amp;학산모터스</td>
-                            <td>A조</td>
-                            <td>2:20.196</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>김주한</td>
-                            <td>브랜뉴레이싱</td>
-                            <td>A조</td>
-                            <td>2:20.249</td>
-                        </tr>
-                        <tr>
-                            <td>21</td>
-                            <td>변정호</td>
-                            <td>Chago 모터스</td>
-                            <td>B조</td>
-                            <td>2:20.283</td>
-                        </tr>
-                        <tr>
-                            <td>15</td>
-                            <td>안순호</td>
-                            <td>MK MOTORS &amp; DRE</td>
-                            <td>A조</td>
-                            <td>2:20.330</td>
-                        </tr>
-                        <tr>
-                            <td>52</td>
-                            <td>최영호</td>
-                            <td>VOODOO LAP</td>
-                            <td>A조</td>
-                            <td>2:20.361</td>
-                        </tr>
-                        <tr>
-                            <td>77</td>
-                            <td>이민주</td>
-                            <td>개인</td>
-                            <td>B조</td>
-                            <td>2:20.407</td>
-                        </tr>
-                        <tr>
-                            <td>128</td>
-                            <td>황준호</td>
-                            <td>비앙코웍스</td>
-                            <td>B조</td>
-                            <td>2:20.439</td>
-                        </tr>
-                        <tr>
-                            <td>38</td>
-                            <td>고근준</td>
-                            <td>용프로모터스 X ROWE</td>
-                            <td>A조</td>
-                            <td>2:20.456</td>
-                        </tr>
-                        <tr>
-                            <td>58</td>
-                            <td>이광호</td>
-                            <td>Team_PITSTART X 무한질주</td>
-                            <td>B조</td>
-                            <td>2:20.520</td>
-                        </tr>
-                        <tr>
-                            <td>160</td>
-                            <td>윤성로</td>
-                            <td>ZIC United</td>
-                            <td>B조</td>
-                            <td>2:20.549</td>
-                        </tr>
-                        <tr>
-                            <td>199</td>
-                            <td>양영하</td>
-                            <td>GHOST</td>
-                            <td>B조</td>
-                            <td>2:20.583</td>
-                        </tr>
-                        <tr>
-                            <td>195</td>
-                            <td>조드래곤</td>
-                            <td>GHOST</td>
-                            <td>A조</td>
-                            <td>2:20.732</td>
-                        </tr>
-                        <tr>
-                            <td>23</td>
-                            <td>성정한</td>
-                            <td>이레인모터스포트</td>
-                            <td>A조</td>
-                            <td>2:20.743</td>
-                        </tr>
-                        <tr>
-                            <td>19</td>
-                            <td>손동욱</td>
-                            <td>개인</td>
-                            <td>B조</td>
-                            <td>2:20.952</td>
-                        </tr>
-                        <tr>
-                            <td>50</td>
-                            <td>손중선</td>
-                            <td>개인</td>
-                            <td>A조</td>
-                            <td>2:21.018</td>
-                        </tr>
-                        <tr>
-                            <td>85</td>
-                            <td>신사용</td>
-                            <td>현대 엑스티어 레이싱팀</td>
-                            <td>B조</td>
-                            <td>2:21.335</td>
-                        </tr>
-                        <tr>
-                            <td>197</td>
-                            <td>장진택</td>
-                            <td>GHOST</td>
-                            <td>A조</td>
-                            <td>2:21.388</td>
-                        </tr>
-                        <tr>
-                            <td>31</td>
-                            <td>노종인</td>
-                            <td>H 모터스 레이싱팀</td>
-                            <td>A조</td>
-                            <td>2:21.777</td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>정현철</td>
-                            <td>피카몰레이싱</td>
-                            <td>A조</td>
-                            <td>2:21.810</td>
-                        </tr>
-                        <tr>
-                            <td>56</td>
-                            <td>황용섭</td>
-                            <td>ZIC United</td>
-                            <td>B조</td>
-                            <td>2:21.922</td>
-                        </tr>
-                        <tr style="color: #e95724; font-weight: bold;">
-                            <td>114</td>
-                            <td>김영민</td>
-                            <td>라온레이싱</td>
-                            <td>A조</td>
-                            <td>2:22.031</td>
-                        </tr>
-                        <tr>
-                            <td>78</td>
-                            <td>김재경</td>
-                            <td>현대 엑스티어 레이싱팀</td>
-                            <td>A조</td>
-                            <td>2:22.106</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>정진원</td>
-                            <td>브라비오</td>
-                            <td>B조</td>
-                            <td>2:22.343</td>
-                        </tr>
-                        <tr>
-                            <td>22</td>
-                            <td>WANG WILLIAM DAVID</td>
-                            <td>브라비오</td>
-                            <td>B조</td>
-                            <td>2:23.054</td>
-                        </tr>
-                        <tr>
-                            <td>74</td>
-                            <td>박용진</td>
-                            <td>비앙코웍스</td>
-                            <td>B조</td>
-                            <td>2:24.616</td>
-                        </tr>
-                        <tr>
-                            <td>79</td>
-                            <td>박성환</td>
-                            <td>브라비오</td>
-                            <td>A조</td>
-                            <td>　</td>
-                        </tr>
-                        <tr>
-                            <td>83</td>
-                            <td>양상국</td>
-                            <td>TEAM HMC</td>
-                            <td>A조</td>
-                            <td>　</td>
-                        </tr>
-                        <tr>
-                            <td>13</td>
-                            <td>신동민</td>
-                            <td>이모션레이싱</td>
-                            <td>B조</td>
-                            <td>　</td>
-                        </tr>
-                        <tr>
-                            <td>18</td>
-                            <td>이윤재</td>
-                            <td>JBRT MOTORSPORT</td>
-                            <td>B조</td>
-                            <td>　</td>
-                        </tr>
-                        <tr>
-                            <td>82</td>
-                            <td>최성호</td>
-                            <td>개인</td>
-                            <td>B조</td>
-                            <td>　</td>
-                        </tr>
-                        <tr>
-                            <td>97</td>
-                            <td>김주렬</td>
-                            <td>㈜화성기계</td>
-                            <td>B조</td>
-                            <td>　</td>
-                        </tr>
-                        <tr>
-                            <td>91</td>
-                            <td>최상헌</td>
-                            <td>MK MOTORS &amp; DRE</td>
-                            <td>A조</td>
-                            <td>　</td>
-                        </tr>
-                        <tr>
-                            <td>47</td>
-                            <td>강진</td>
-                            <td>인터넷비교원&amp;학산모터스</td>
-                            <td>B조</td>
-                            <td>　</td>
-                        </tr>
-                        <tr>
-                            <td>111</td>
-                            <td>박치형</td>
-                            <td>DCT RACING</td>
-                            <td>B조</td>
-                            <td>　</td>
-                        </tr>
-                        <tr>
-                            <td>180</td>
-                            <td>조희은</td>
-                            <td>JBRT MOTORSPORT</td>
-                            <td>B조</td>
-                            <td>　</td>
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td>KRAPF FLORIAN MARKUS</td>
-                            <td>TEAM HMC</td>
-                            <td>A조</td>
-                            <td>　</td>
-                        </tr>
-                        <tr>
-                            <td>35</td>
-                            <td>김보성</td>
-                            <td>개인</td>
-                            <td>A조</td>
-                            <td>　</td>
-                        </tr>
-                        <tr>
-                            <td>51</td>
-                            <td>권세훈</td>
-                            <td>개인</td>
-                            <td>A조</td>
-                            <td>　</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>1위~26위(26대) : 🥇 마스터즈 진출</p>
-                <p>26위~52위(26대) : 🥈 챌린지(1) 진출</p>
-                <p>53위~57위(5대) : 🥉 예선 탈락</p>
-            </div>
+            <h3>안내사항</h3>
+            <span class=small-info>2026.06.12</span>
+            <a href="images/INFO1.jpg">
+                <img src="images/INFO1.jpg">
+            </a>
+            <a href="images/INFO2.jpg">
+                <img src="images/INFO2.jpg">
+            </a>
+            <a href="images/INFO3.jpg">
+                <img src="images/INFO3.jpg">
+            </a>
+            <a href="images/INFO4.jpg">
+                <img src="images/INFO4.jpg">
+            </a>
+            <a href="images/PIT.jpg">
+                <img src="images/PIT.jpg">
+            </a>
+            <a href="images/TIMETABLE_FRI.jpg">
+                <img src="images/TIMETABLE_FRI.jpg">
+            </a>
+            <a href="images/TIMETABLE_SAT.jpg">
+                <img src="images/TIMETABLE_SAT.jpg">
+            </a>
+            <a href="images/TIMETABLE_SUN.jpg">
+                <img src="images/TIMETABLE_SUN.jpg">
+            </a>
         </div>
     </div>
 
@@ -3416,7 +2958,7 @@
                     description.includes('eN1') ||
                     description.includes('N1') ||
                     description.includes('트랙') ||
-                    description.includes('넥센 N2 클래스 B조') ||
+                    description.includes('N2(마스터즈)') ||
                     description.includes('자율무게검차') ||
                     description.includes('점심시간') ||
                     description.includes('검차') ||
