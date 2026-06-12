@@ -260,14 +260,38 @@
 
         #record th:nth-child(2),
         #record td:nth-child(2) {
-            width: 20%;
+            width: 15%;
             /* 이름 열 너비 */
         }
 
         #record th:nth-child(3),
         #record td:nth-child(3) {
+            width: 20%;
+            /* 팀 열 너비 */
+        }
+
+        #record th:nth-child(4),
+        #record td:nth-child(4) {
+            width: 20%;
+            /* 예선기록 열 너비 */
+        }
+
+        #record th:nth-child(5),
+        #record td:nth-child(5) {
+            width: 10%;
+            /* 예선순위 열 너비 */
+        }
+
+        #record th:nth-child(6),
+        #record td:nth-child(6) {
+            width: 10%;
+            /* 결승순위 열 너비 */
+        }
+
+        #record th:nth-child(7),
+        #record td:nth-child(7) {
             width: 15%;
-            /* BL 열 너비 */
+            /* 클래스 열 너비 */
         }
 
 
@@ -495,6 +519,12 @@
         #r1-entry-list th {
             background-color: #6a394a;
             color: #ffffff;
+        }
+
+        /* 안내사항 탭 이미지 사이즈 조절 */
+        .r1-entry img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
